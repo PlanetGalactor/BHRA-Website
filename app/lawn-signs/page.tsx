@@ -22,7 +22,7 @@ export default function LawnSignsPage() {
               <label htmlFor="email" className="block text-sm font-bold text-gray-700 font-ui uppercase tracking-wider mb-2">Email</label>
               <input type="email" name="_replyto" id="email" required className="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
             </div>
-            <button type="submit" className="w-full bg-primary hover:bg-[#a3107c] text-white font-sans font-bold uppercase tracking-[1px] py-4 rounded transition-colors mt-4">
+            <button type="submit" className="w-full mt-4 bg-primary text-white font-sans font-bold uppercase tracking-[1px] px-8 py-3 rounded border-2 border-primary hover:opacity-90 hover:scale-[1.02] transition-all">
               Request Sign
             </button>
           </form>

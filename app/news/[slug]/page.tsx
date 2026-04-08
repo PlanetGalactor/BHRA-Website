@@ -29,7 +29,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     <article className="py-16">
       <div className="max-w-[760px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link href="/news" className="text-accent hover:text-primary font-ui uppercase tracking-widest text-sm font-bold flex items-center mb-6">
+          <Link href="/news" className="text-primary hover:opacity-80 font-ui uppercase tracking-widest text-sm font-bold flex items-center mb-6 transition-opacity">
             ← Back to News
           </Link>
           <div className="flex gap-4 items-center mb-4">
@@ -46,7 +46,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
         
         <div 
-          className="prose prose-lg max-w-none text-foreground font-sans prose-headings:font-serif prose-headings:text-primary prose-a:text-accent hover:prose-a:text-primary prose-img:rounded-md mt-8 pb-16"
+          className="prose prose-lg max-w-none text-foreground font-sans prose-headings:font-serif prose-headings:text-primary prose-a:text-primary hover:prose-a:opacity-80 prose-img:rounded-md mt-8 pb-16 transition-opacity"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
       </div>

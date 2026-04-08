@@ -6,13 +6,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "News", href: "/news" },
-  { name: "Projects", href: "/projects" },
-  { name: "Community", href: "/community" },
+  { name: "News & Media", href: "/news" },
+  { name: "Projects & Developments", href: "/projects" },
   { name: "Get Involved", href: "/get-involved" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -27,26 +24,26 @@ export default function Navbar() {
               <img
                 src="https://demo.buttonwoodhillresidents.com/wp-content/uploads/2019/05/BlackButtonwoodHill.png"
                 alt="BHRA Logo"
-                className="h-12 w-auto"
+                className="h-[58px] w-auto"
               />
             </Link>
           </div>
           
-          <div className="hidden lg:flex items-center space-x-6 shrink-0">
+          <div className="hidden lg:flex items-center space-x-8 shrink-0">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[#2c2d2e] hover:text-accent font-ui font-bold uppercase tracking-[2px] text-sm transition-colors"
+                className="text-[#2c2d2e] hover:text-primary focus:text-primary font-ui font-bold uppercase tracking-[2px] text-sm transition-colors"
               >
                 {link.name}
               </Link>
             ))}
             <Link
-              href="/lawn-signs"
-              className="bg-primary hover:bg-[#a3107c] text-white font-sans font-bold uppercase tracking-[1px] px-6 py-3 rounded text-sm transition-col"
+              href="/contact"
+              className="bg-primary text-white font-sans font-bold uppercase tracking-[1px] px-8 py-3 rounded border-2 border-primary hover:opacity-90 hover:-translate-y-0.5 hover:scale-[1.02] transition-all text-[16px]"
             >
-              Order Signs
+              Contact Us
             </Link>
           </div>
           
@@ -69,17 +66,17 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-[#2c2d2e] hover:text-accent block px-3 py-2 rounded-md font-ui font-bold uppercase tracking-[2px] text-sm"
+                className="text-[#2c2d2e] hover:text-primary focus:text-primary block px-3 py-2 rounded-md font-ui font-bold uppercase tracking-[2px] text-sm transition-colors"
               >
                 {link.name}
               </Link>
             ))}
             <Link
-              href="/lawn-signs"
+              href="/contact"
               onClick={() => setIsOpen(false)}
-              className="bg-primary hover:bg-[#a3107c] text-white font-sans font-bold uppercase tracking-[1px] block text-center px-3 py-2 rounded-md text-sm mt-4"
+              className="bg-primary text-white font-sans font-bold uppercase tracking-[1px] block text-center px-8 py-3 rounded mt-4 border-2 border-primary text-[16px]"
             >
-              Order Signs
+              Contact Us
             </Link>
           </div>
         </div>

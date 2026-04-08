@@ -24,7 +24,7 @@ export default function ProjectsPage() {
             <div key={proj.name} className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col">
               <h3 className="text-2xl font-serif font-bold text-primary mb-3">{proj.name}</h3>
               <p className="text-foreground mb-6 flex-grow">{proj.desc}</p>
-              <Link href="/news" className="text-accent font-bold font-ui uppercase tracking-widest text-sm hover:text-primary transition-colors">
+              <Link href="/news" className="text-primary font-bold font-ui uppercase tracking-widest text-sm hover:opacity-80 transition-opacity inline-block">
                 View Related News →
               </Link>
             </div>
