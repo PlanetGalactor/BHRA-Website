@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "About Us", href: "/about" },
@@ -14,70 +14,95 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <nav className="bg-white sticky top-0 z-50 border-b border-border">
-      <div className="max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <nav className="bg-white sticky top-0 z-50 border-b border-[#f7f9f9] shadow-sm">
+      <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-24">
+          {/* Logo Left */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center transition-transform hover:scale-105 duration-300">
               <img
                 src="https://demo.buttonwoodhillresidents.com/wp-content/uploads/2019/05/BlackButtonwoodHill.png"
                 alt="BHRA Logo"
-                className="h-[58px] w-auto"
+                className="h-[70px] w-auto"
               />
             </Link>
           </div>
           
-          <div className="hidden lg:flex items-center space-x-8 shrink-0">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-[#2c2d2e] hover:text-primary focus:text-primary font-ui font-bold uppercase tracking-[2px] text-sm transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
+          {/* Center Links */}
+          <div className="hidden lg:flex items-center flex-1 justify-center gap-[40px]">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`font-ui font-bold uppercase tracking-[2px] text-[14px] transition-colors duration-300 relative group
+                    ${isActive ? "text-primary" : "text-[#2c2d2e] hover:text-primary"}
+                  `}
+                >
+                  {link.name}
+                  {/* Subtle underline hover effect */}
+                  <span className={`absolute left-0 bottom-[-4px] w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ${isActive ? "scale-x-100" : ""}`}></span>
+                </Link>
+              );
+            })}
+          </div>
+          
+          {/* Right Button */}
+          <div className="hidden lg:flex items-center shrink-0">
             <Link
               href="/contact"
-              className="bg-primary text-white font-sans font-bold uppercase tracking-[1px] px-8 py-3 rounded border-2 border-primary hover:opacity-90 hover:-translate-y-0.5 hover:scale-[1.02] transition-all text-[16px]"
+              className="bg-primary text-white font-ui font-bold uppercase tracking-[2px] text-[14px] px-[24px] py-[10px] rounded-[4px] border-2 border-primary hover:bg-[#a3107c] hover:border-[#a3107c] hover:scale-[1.02] transition-all duration-300 shadow-sm"
+              style={{ color: '#ffffff' }}
             >
               Contact Us
             </Link>
           </div>
           
+          {/* Mobile menu toggle */}
           <div className="flex items-center lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary focus:outline-none"
+              className="text-[#2c2d2e] hover:text-primary focus:outline-none transition-colors"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
             </button>
           </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-b border-border shadow-lg absolute w-full">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
+        <div className="lg:hidden bg-white border-b border-[#f7f9f9] shadow-lg absolute w-full left-0 origin-top animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="px-4 pt-2 pb-6 space-y-2 sm:px-6">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-3 rounded-md font-ui font-bold uppercase tracking-[2px] text-sm transition-colors border-l-4
+                    ${isActive ? "text-primary border-primary bg-[#f7f9f9]" : "text-[#2c2d2e] border-transparent hover:text-primary hover:bg-[#f7f9f9] hover:border-primary"}
+                  `}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+            <div className="pt-4 px-3">
               <Link
-                key={link.name}
-                href={link.href}
+                href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="text-[#2c2d2e] hover:text-primary focus:text-primary block px-3 py-2 rounded-md font-ui font-bold uppercase tracking-[2px] text-sm transition-colors"
+                className="bg-primary text-white font-ui font-bold uppercase tracking-[2px] block text-center px-[24px] py-[12px] rounded-[4px] border-2 border-primary hover:bg-[#a3107c] transition-colors shadow-sm"
+                style={{ color: '#ffffff' }}
               >
-                {link.name}
+                Contact Us
               </Link>
-            ))}
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="bg-primary text-white font-sans font-bold uppercase tracking-[1px] block text-center px-8 py-3 rounded mt-4 border-2 border-primary text-[16px]"
-            >
-              Contact Us
-            </Link>
+            </div>
           </div>
         </div>
       )}
