@@ -56,7 +56,7 @@ export default function ProjectsPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((proj) => (
-            <div key={proj.name} className="bg-white rounded-[8px] border border-gray-100 flex flex-col overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+            <Link key={proj.name} href={`/projects/${proj.slug}`} className="bg-white rounded-[8px] border border-gray-100 flex flex-col overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group block">
               <div className="relative h-[240px] w-full bg-primary/10 overflow-hidden">
                 <Image 
                   src={proj.image} 
@@ -69,12 +69,12 @@ export default function ProjectsPage() {
                 <h3 className="text-2xl font-serif font-bold text-primary mb-3">{proj.name}</h3>
                 <p className="text-foreground mb-8 flex-grow leading-relaxed">{proj.desc}</p>
                 <div className="mt-auto">
-                  <Link href={`/projects/${proj.slug}`} className="text-primary font-bold font-ui uppercase tracking-widest text-sm hover:opacity-80 transition-opacity inline-flex items-center gap-2">
+                  <span className="text-primary font-bold font-ui uppercase tracking-widest text-sm hover:opacity-80 transition-opacity inline-flex items-center gap-2">
                     View Project Details <ArrowRight size={16} />
-                  </Link>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

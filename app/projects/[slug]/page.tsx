@@ -24,8 +24,9 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function DynamicProjectPage({ params }: { params: { slug: string } }) {
-  const project = PROJECTS.find(p => p.slug === params.slug);
+export default async function DynamicProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const project = PROJECTS.find(p => p.slug === resolvedParams.slug);
   if (!project) notFound();
 
   const allPosts = getSortedPostsData();
