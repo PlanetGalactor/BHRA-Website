@@ -8,7 +8,6 @@ export default function AboutPage() {
     { name: "Ela", role: "Executive Member" },
     { name: "Shabnam", role: "Executive Member" },
     { name: "Pauline", role: "Executive Member" },
-    { name: "Nancy", role: "Executive Member" },
   ];
 
   const timelineSteps = [
@@ -144,7 +143,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
               <div
                 key={index}
