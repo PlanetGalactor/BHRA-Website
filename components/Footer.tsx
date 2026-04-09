@@ -42,8 +42,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/newsletters" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                  Newsletters
+                </Link>
+              </li>
+              <li>
                 <Link href="/projects" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
                   Projects & Developments
+                </Link>
+              </li>
+              <li>
+                <Link href="/quick-links" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                  Community Quick Links
                 </Link>
               </li>
               <li>

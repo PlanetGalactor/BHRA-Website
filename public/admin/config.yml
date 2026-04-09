@@ -28,3 +28,14 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "newsletters"
+    label: "Newsletters"
+    folder: "public/newsletters"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Issue Number", name: "issue", widget: "number"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "PDF File", name: "pdf", widget: "file"}

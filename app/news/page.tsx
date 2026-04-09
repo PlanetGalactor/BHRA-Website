@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
 import { Post } from "@/lib/markdown";
-import { ImageIcon } from "lucide-react";
+import { ImageIcon, X, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 
 const CATEGORIES = [
   "All",
@@ -17,6 +17,63 @@ const CATEGORIES = [
   "Other Developments"
 ];
 
+const ALBUMS = [
+  {
+    title: "Picnic in the Park 2025",
+    date: "September 2025",
+    cover: "/images/albums/picnic-in-the-park-2025/67ab7bbc.jpg",
+    photos: [
+      "/images/albums/picnic-in-the-park-2025/67ab7bbc.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_0016.jpg",
+      "/images/albums/picnic-in-the-park-2025/3243d120.jpg",
+      "/images/albums/picnic-in-the-park-2025/3a512a0e.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9681.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9684.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9685.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9686.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9687.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9688.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9690.jpg",
+      "/images/albums/picnic-in-the-park-2025/IMG_9700.jpg"
+    ]
+  },
+  {
+    title: "Buttonwood Park Picnic 2024",
+    date: "September 2024",
+    cover: "/images/albums/buttonwood-park-picnic-2024/IMG_0213.jpg",
+    photos: [
+      "/images/albums/buttonwood-park-picnic-2024/IMG_0213.jpg",
+      "/images/albums/buttonwood-park-picnic-2024/IMG_4286.jpg"
+    ]
+  },
+  {
+    title: "Save Buttonwood Park 2024",
+    date: "August 2024",
+    cover: "/images/albums/save-buttonwood-park-2024/IMG_3582.jpg",
+    photos: [
+      "/images/albums/save-buttonwood-park-2024/IMG_3582.jpg",
+      "/images/albums/save-buttonwood-park-2024/IMG_3586.jpg"
+    ]
+  },
+  {
+    title: "Community BBQ 2019",
+    date: "June 2019",
+    cover: "/images/albums/bhra-community-bbq-june-2019/IMG_3769.jpg",
+    photos: [
+      "/images/albums/bhra-community-bbq-june-2019/IMG_3769.jpg",
+      "/images/albums/bhra-community-bbq-june-2019/IMG_3782.jpg"
+    ]
+  },
+  {
+    title: "Stuff The Bus",
+    date: "December 2023",
+    cover: "/images/albums/stuff-the-bus/IMG_4189.jpg",
+    photos: [
+      "/images/albums/stuff-the-bus/IMG_4189.jpg"
+    ]
+  }
+];
+
 const POSTS_PER_PAGE = 9;
 
 export default function NewsPage() {
@@ -24,6 +81,10 @@ export default function NewsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+
+  // Lightbox State
+  const [activeAlbum, setActiveAlbum] = useState<{ title: string, photos: string[] } | null>(null);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
 
   useEffect(() => {
     async function fetchPosts() {
@@ -42,6 +103,18 @@ export default function NewsPage() {
     fetchPosts();
   }, []);
 
+  // Handle Lightbox Keyboard Navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!activeAlbum) return;
+      if (e.key === 'Escape') setActiveAlbum(null);
+      if (e.key === 'ArrowRight') setActivePhotoIndex(prev => (prev + 1) % activeAlbum.photos.length);
+      if (e.key === 'ArrowLeft') setActivePhotoIndex(prev => (prev - 1 + activeAlbum.photos.length) % activeAlbum.photos.length);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeAlbum]);
+
   const filteredPosts = activeCategory === "All" 
     ? posts 
     : posts.filter(post => post.category === activeCategory);
@@ -53,7 +126,62 @@ export default function NewsPage() {
   );
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
+      {/* Lightbox Overlay */}
+      {activeAlbum && (
+        <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center animate-in fade-in duration-300">
+          <button 
+            onClick={() => setActiveAlbum(null)}
+            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+          >
+            <X size={36} />
+          </button>
+          
+          <div className="absolute top-6 left-6 text-white">
+            <h3 className="font-serif font-bold text-2xl">{activeAlbum.title}</h3>
+            <p className="opacity-70">{activePhotoIndex + 1} / {activeAlbum.photos.length}</p>
+          </div>
+
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              setActivePhotoIndex(prev => (prev - 1 + activeAlbum.photos.length) % activeAlbum.photos.length);
+            }}
+            className="absolute left-6 text-white/50 hover:text-white transition-colors p-2"
+          >
+            <ChevronLeft size={48} />
+          </button>
+
+          <img 
+            src={activeAlbum.photos[activePhotoIndex]} 
+            alt="Album Photo" 
+            className="max-h-[85vh] max-w-[85vw] object-contain shadow-2xl rounded-sm"
+          />
+
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              setActivePhotoIndex(prev => (prev + 1) % activeAlbum.photos.length);
+            }}
+            className="absolute right-6 text-white/50 hover:text-white transition-colors p-2"
+          >
+            <ChevronRight size={48} />
+          </button>
+          
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 px-4 overflow-x-auto">
+            {activeAlbum.photos.map((photo, i) => (
+              <button 
+                key={i} 
+                onClick={() => setActivePhotoIndex(i)}
+                className={`w-16 h-12 flex-shrink-0 relative rounded-sm overflow-hidden border-2 transition-all ${activePhotoIndex === i ? 'border-primary opacity-100' : 'border-transparent opacity-40 hover:opacity-100'}`}
+              >
+                <img src={photo} className="absolute inset-0 w-full h-full object-cover" alt="" />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Header Section */}
       <section className="relative w-full min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image 
@@ -181,24 +309,54 @@ export default function NewsPage() {
       </section>
 
       {/* Media & Photos Section */}
-      <section className="bg-primary py-[80px] max-md:py-[48px]">
+      <section className="bg-white py-[80px] border-t border-gray-100">
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-white mb-4">Media & Photos</h2>
-            <p className="text-[18px] text-white/90 font-sans mb-10">
-              Photo albums from past community events.
+          <div className="text-center mb-16">
+            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-4">Media & Photos</h2>
+            <div className="w-24 h-1.5 bg-accent mx-auto rounded-full mb-6"></div>
+            <p className="text-[18px] text-[#666666] font-sans mb-10 max-w-2xl mx-auto">
+              Explore photo albums from our past community events, picnics, and townhalls.
             </p>
-            
-            <div className="bg-white/10 p-16 rounded-[8px] border-2 border-dashed border-white/20 text-center flex flex-col items-center justify-center max-w-3xl mx-auto backdrop-blur-sm">
-              <div className="w-[80px] h-[80px] bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-primary">
-                <ImageIcon size={40} />
-              </div>
-              <h3 className="text-[26px] font-serif font-bold text-white mb-4">Coming Soon</h3>
-              <p className="text-white/90 text-[16px] leading-[1.7em] max-w-md mx-auto">
-                We are currently gathering our event photos to showcase our vibrant community here. Check back soon!
-              </p>
-            </div>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ALBUMS.map((album, index) => (
+              <button 
+                key={index}
+                onClick={() => {
+                  setActiveAlbum(album);
+                  setActivePhotoIndex(0);
+                }}
+                className="group text-left bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-gray-100 hover:border-primary/30 hover:-translate-y-1"
+              >
+                <div className="relative h-[250px] w-full overflow-hidden bg-gray-100">
+                  <Image 
+                    src={album.cover} 
+                    alt={album.title} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-[#9b287b]/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Photo Count Badge */}
+                  <div className="absolute bottom-4 right-4 bg-primary/90 text-white backdrop-blur-sm shadow-md px-3 py-1.5 rounded-full flex items-center gap-2 font-ui font-bold text-[12px] tracking-wider z-10">
+                    <Camera size={14} />
+                    {album.photos.length} Photos
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <span className="text-[#666666] font-ui uppercase tracking-widest text-[12px] font-bold block mb-2">
+                    {album.date}
+                  </span>
+                  <h3 className="text-[22px] font-serif font-bold text-[#2c2d2e] group-hover:text-primary transition-colors leading-[1.3]">
+                    {album.title}
+                  </h3>
+                </div>
+              </button>
+            ))}
+          </div>
+
         </div>
       </section>
 
