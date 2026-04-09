@@ -309,12 +309,12 @@ export default function NewsPage() {
       </section>
 
       {/* Media & Photos Section */}
-      <section className="bg-white py-[80px] border-t border-gray-100">
+      <section className="bg-primary py-[80px] border-t border-primary/90">
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-4">Media & Photos</h2>
-            <div className="w-24 h-1.5 bg-accent mx-auto rounded-full mb-6"></div>
-            <p className="text-[18px] text-[#666666] font-sans mb-10 max-w-2xl mx-auto">
+            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-white mb-4">Media & Photos</h2>
+            <div className="w-24 h-1.5 bg-white/30 mx-auto rounded-full mb-6"></div>
+            <p className="text-[18px] text-white/90 font-sans mb-10 max-w-2xl mx-auto">
               Explore photo albums from our past community events, picnics, and townhalls.
             </p>
           </div>
@@ -327,7 +327,7 @@ export default function NewsPage() {
                   setActiveAlbum(album);
                   setActivePhotoIndex(0);
                 }}
-                className="group text-left bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-gray-100 hover:border-primary/30 hover:-translate-y-1"
+                className="group text-left bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border-2 border-transparent hover:border-accent hover:-translate-y-1"
               >
                 <div className="relative h-[250px] w-full overflow-hidden bg-gray-100">
                   <Image 
@@ -346,7 +346,7 @@ export default function NewsPage() {
                 </div>
                 
                 <div className="p-6">
-                  <span className="text-[#666666] font-ui uppercase tracking-widest text-[12px] font-bold block mb-2">
+                  <span className="text-accent font-ui uppercase tracking-widest text-[12px] font-bold block mb-2">
                     {album.date}
                   </span>
                   <h3 className="text-[22px] font-serif font-bold text-[#2c2d2e] group-hover:text-primary transition-colors leading-[1.3]">

@@ -4,12 +4,12 @@ import { ArrowRight, Star } from "lucide-react";
 
 export default function ProjectsPage() {
   const projects = [
-    { name: "Buttonwood Hill Property", desc: "Latest info and hearings regarding the Buttonwood Hill local development initiatives.", image: "/images/projects/buttonwood.png" },
-    { name: "Plant World", desc: "Updates on the Plant World site development and rezoning applications.", image: "/images/projects/plant-world.png" },
-    { name: "Humbertown Plaza", desc: "Redevelopment plans and resident feedback regarding local commercial hubs.", image: "/images/projects/humbertown.jpg" },
-    { name: "Eglinton West LRT", desc: "Transit expansion updates and community impact on our local infrastructure.", image: "/images/projects/eglinton-west.png" },
-    { name: "Richview Square", desc: "Upcoming commercial and residential changes in the Richview footprint.", image: "/images/projects/richview-square.jpg" },
-    { name: "La Rose Apartments", desc: "Details on ongoing proposals and high-rise density conversations.", image: "/images/projects/la-rose.jpg" }
+    { name: "Buttonwood Hill Property", slug: "buttonwood-property", desc: "Latest info and hearings regarding the Buttonwood Hill local development initiatives.", image: "/images/projects/buttonwood.png" },
+    { name: "Plant World", slug: "plant-world", desc: "Updates on the Plant World site development and rezoning applications.", image: "/images/projects/plant-world.png" },
+    { name: "Humbertown Plaza", slug: "humbertown-plaza", desc: "Redevelopment plans and resident feedback regarding local commercial hubs.", image: "/images/projects/humbertown.jpg" },
+    { name: "Eglinton West LRT", slug: "eglinton-west-lrt", desc: "Transit expansion updates and community impact on our local infrastructure.", image: "/images/projects/eglinton-west.png" },
+    { name: "Richview Square", slug: "richview-square", desc: "Upcoming commercial and residential changes in the Richview footprint.", image: "/images/projects/richview-square.jpg" },
+    { name: "La Rose Apartments", slug: "la-rose-apartments", desc: "Details on ongoing proposals and high-rise density conversations.", image: "/images/projects/la-rose.jpg" }
   ];
 
   return (
@@ -24,11 +24,11 @@ export default function ProjectsPage() {
 
         {/* Featured Project */}
         <div className="mb-16">
-          <Link href="/projects/buttonwood-park-improvements" className="group block bg-white rounded-2xl border-2 border-primary/20 flex flex-col md:flex-row overflow-hidden shadow-md hover:shadow-xl hover:border-primary/50 transition-all duration-300">
+          <Link href="/projects/buttonwood-property" className="group block bg-white rounded-2xl border-2 border-primary/20 flex flex-col md:flex-row overflow-hidden shadow-md hover:shadow-xl hover:border-primary/50 transition-all duration-300">
             <div className="relative h-[250px] md:h-auto md:w-2/5 overflow-hidden bg-primary/10 flex-shrink-0">
               <Image 
                 src="/images/ButtonwoodParkImprovements.jpg"
-                alt="Buttonwood Park Improvements" 
+                alt="Buttonwood Hill Property" 
                 fill 
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
@@ -38,13 +38,13 @@ export default function ProjectsPage() {
             </div>
             <div className="p-8 md:p-12 flex flex-col justify-center flex-grow">
               <h2 className="text-[32px] font-serif font-bold text-primary mb-4 group-hover:text-[#a3107c] transition-colors">
-                Buttonwood Park Improvements Project
+                Buttonwood Hill Property
               </h2>
               <p className="text-foreground text-[16px] leading-relaxed mb-8 flex-grow">
-                The City of Toronto is undertaking significant improvements to Buttonwood Park. The park design will be determined through extensive community engagement and is proposed to include upgraded accessible pathways, a shade structure, new seating, and lighting improvements.
+                The Buttonwood Hill Property represents the core of our neighborhood focus. Most recently, the City of Toronto is undertaking significant improvements to Buttonwood Park. The park design will be determined through extensive community engagement and is proposed to include upgraded accessible pathways, a shade structure, new seating, and lighting improvements.
               </p>
               <div className="inline-flex items-center gap-2 bg-primary text-white font-ui font-bold uppercase tracking-[1px] text-[13px] px-6 py-3 rounded-[4px] self-start group-hover:bg-[#a3107c] transition-colors">
-                View Project Timeline <ArrowRight size={16} />
+                View Project Details <ArrowRight size={16} />
               </div>
             </div>
           </Link>
@@ -69,8 +69,8 @@ export default function ProjectsPage() {
                 <h3 className="text-2xl font-serif font-bold text-primary mb-3">{proj.name}</h3>
                 <p className="text-foreground mb-8 flex-grow leading-relaxed">{proj.desc}</p>
                 <div className="mt-auto">
-                  <Link href="/news" className="text-primary font-bold font-ui uppercase tracking-widest text-sm hover:opacity-80 transition-opacity inline-flex items-center gap-2">
-                    View Related News <ArrowRight size={16} />
+                  <Link href={`/projects/${proj.slug}`} className="text-primary font-bold font-ui uppercase tracking-widest text-sm hover:opacity-80 transition-opacity inline-flex items-center gap-2">
+                    View Project Details <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
