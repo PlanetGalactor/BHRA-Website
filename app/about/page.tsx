@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { User } from "lucide-react";
+import { User, Calendar, MapPin, Building, Activity, Users } from "lucide-react";
 
 export default function AboutPage() {
   const team = [
@@ -11,124 +11,163 @@ export default function AboutPage() {
     { name: "Nancy", role: "Executive Member" },
   ];
 
-  const projects = [
-    { 
-      name: "Buttonwood Hill Property", 
-      desc: "Buttonwood Hill School was purchased by the Toronto Catholic District School Board on March 8, 2019. This site was recently ranked as #1 on the 2019-2020 Capital Priorities list... On October 2, 2019, our Board met with Trustee Markus de Domenico and confirmed our request for a community consultation meeting." 
+  const timelineSteps = [
+    {
+      year: "2003",
+      title: "The Beginning",
+      content: "Buttonwood Hill Residents Association was formed when our neighbourhood became aware of a proposed development at 75 Lemonwood Drive. It was clear that our neighbours were concerned about the proposed height, density and increased traffic in the area.",
+      icon: <Building className="w-5 h-5 text-white" />
     },
-    { 
-      name: "Plant World Development", 
-      desc: "Plant World closed its doors as of September 30, 2019. Four new towers are planned for this site, 3 buildings of 25-storeys and a 21-storey building, with a total of 1360 units." 
+    {
+      year: "The Action",
+      title: "Getting Organized",
+      content: "A group of 6 residents began to meet regularly. We talked to neighbours; attended public meetings; prepared petitions; became part of a working group with our City Councillor, the developer and City Staff.",
+      icon: <Users className="w-5 h-5 text-white" />
     },
-    { 
-      name: "Humbertown Plaza", 
-      desc: "This development’s been approved. A sales pavilion will likely appear this fall toward the end of 2018. Construction will take 2 ½ to 3 years. During construction, the LCBO will set up a trailer in the next parking lot... The construction of Block 5 will span 2-3 years." 
+    {
+      year: "The Result",
+      title: "A Community Win",
+      content: "We were advised that the builder was proposing a seniors’ retirement residence with reduced height. We happily welcomed seniors into our neighbourhood and approved the revised proposal. We also secured Section 37 funds of $150,000 for the improvement of Buttonwood Park.",
+      icon: <Activity className="w-5 h-5 text-white" />
     },
-    { 
-      name: "Richview Square", 
-      desc: "Trinity Development Group and CreateTO (formerly Build Toronto) filed their zoning development application for three new mixed-use buildings of 22, 22 and 11 storeys. Many modifications have been made by the developer after listening to community comments. In April of this year, Trinity Development Group and CreateTO filed for buildings of 22, 22, and 16 storeys. Concerns have been clear that 22 floor residential buildings will not be supported by the community." 
-    },
-    { 
-      name: "Richview Square 2 (Shannex Development)", 
-      desc: "This development has yielded $463,000 in Section 42 funds (rules governing parkland dedication) to be utilized for improvements to nearby parks." 
-    },
-    { 
-      name: "St. Stevens Court", 
-      desc: "Five buildings (6-9 storeys) will be constructed containing 523 units. Construction will get underway in the first half of 2019. Four buildings were approved (9, 6, 6 and 6 storeys)... Two buildings have rental units, two will be for-purchase condominiums." 
-    },
-    { 
-      name: "La Rose Apartments", 
-      desc: "A seven-storey rental apartment building has been proposed including 187 units adjacent to an existing 16 storey building. The decision will grant a zoning by-law amendment to permit an infill apartment building." 
-    },
-    { 
-      name: "Eglinton West LRT", 
-      desc: "Part of a mass transit plan between the City of Toronto and the Province of Ontario. Expansion is expected to be underground for much of the area between Mount Dennis and the airport." 
+    {
+      year: "2017 & Beyond",
+      title: "Continued Advocacy",
+      content: "We fought to support the sale of Buttonwood School to a board and supported Friends of Silver Creek. It was a win/win outcome for both schools! We continually organize informative, well-attended community meetings for the continued vibrancy of Buttonwood Hill.",
+      icon: <MapPin className="w-5 h-5 text-white" />
     }
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* 1. Hero banner */}
-      <section className="bg-gradient-to-r from-primary to-[#851d68] py-[120px] relative text-center flex items-center justify-center border-b-[8px] border-accent">
-        <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-5xl md:text-6xl lg:text-[64px] font-serif font-bold text-white mb-6 drop-shadow-sm">
-            About Us
+      <section className="relative w-full min-h-[500px] flex items-center justify-center overflow-hidden">
+        <Image 
+          src="/images/hero-park.jpg" 
+          alt="Buttonwood Hill Park" 
+          fill 
+          priority 
+          className="object-cover object-center absolute inset-0 z-0 opacity-80 mix-blend-overlay" 
+        />
+        <div className="absolute inset-0 bg-[#9b287b] mix-blend-multiply opacity-90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#9b287b] to-transparent z-10"></div>
+        
+        <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center flex flex-col items-center">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-bold uppercase tracking-wider mb-6 border border-white/20 backdrop-blur-sm">
+            Est. 2003
+          </div>
+          <h1 className="text-5xl md:text-6xl lg:text-[72px] font-serif font-bold text-white mb-6 drop-shadow-lg">
+            Our Story
           </h1>
-          <p className="text-lg md:text-[20px] text-white font-sans max-w-3xl mx-auto leading-[1.6em] opacity-90">
-            Buttonwood Hill Residents Association (BHRA) brings the community together to advocate and stay informed about local events and issues impacting our residents, in order to maintain safe and thriving neighbourhoods.
+          <p className="text-lg md:text-[22px] text-white/90 font-sans max-w-3xl mx-auto leading-[1.6em] drop-shadow-md font-light">
+            Bringing the community together to advocate, stay informed, and maintain a safe, thriving neighbourhood.
           </p>
         </div>
       </section>
 
-      {/* 2. Our Story */}
-      <section className="bg-white py-[80px] max-md:py-[48px]">
+      {/* 2. Timeline Journey */}
+      <section className="bg-white py-24 md:py-32 relative overflow-hidden">
+        {/* Subtle background flair */}
+        <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[800px] mx-auto text-center mb-12">
-            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-4">Our Story</h2>
-            <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+          <div className="text-center mb-20">
+            <h2 className="text-[40px] md:text-[48px] font-serif font-bold text-[#2c2d2e] mb-4">The BHRA Journey</h2>
+            <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
-          
-          <div className="max-w-[800px] mx-auto text-[#666666] font-sans text-[18px] leading-[1.8em] space-y-6">
-            <p>
-              Buttonwood Hill Residents Association was formed in 2003 when our neighbourhood became aware of a proposed development at 75 Lemonwood Drive. It was clear that our neighbours were concerned about the proposed height, density and increased traffic in the area.
-            </p>
-            <p>
-              A group of 6 residents began to meet regularly. We talked to neighbours; attended public meetings; prepared petitions; became part of a working group with our City Councillor, the developer and City Staff.
-            </p>
-            <p>
-              We were then advised that the builder was proposing to build a seniors’ retirement residence and would also reduce the height of the building. We were happy to welcome seniors into our neighbourhood and so approval to a revised proposal was given with the provision that the building would always remain a seniors’ residence or long term care facility. We also secured Section 37 funds from the developer of $150,000.00 to be used for the improvement of Buttonwood Park for everyone to enjoy.
-            </p>
-            <p>
-              Most recently, in 2017, Buttonwood Hill Residents Association fought to support the sale of Buttonwood Hill Public School to a school board and provided support to Friends of Silver Creek to help Save Silver Creek School. Today, we are very happy to report that it was a win/win outcome for both schools. After working so well together, we partnered with Friends of Silver Creek this past March to present an informative and well-attended community meeting at Silver Creek School on the topic of Planning Section Funds.
-            </p>
+
+          <div className="relative max-w-3xl mx-auto">
+            {/* Vertical Line */}
+            <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-[#f7f9f9] md:-translate-x-1/2"></div>
+
+            <div className="space-y-12 md:space-y-24">
+              {timelineSteps.map((step, index) => {
+                const isEven = index % 2 === 0;
+                return (
+                  <div key={index} className={`relative flex items-center md:justify-between flex-col md:flex-row group ${isEven ? 'md:flex-row-reverse' : ''}`}>
+                    {/* Center Icon */}
+                    <div className="absolute left-[28px] md:left-1/2 w-14 h-14 bg-primary rounded-full flex items-center justify-center md:-translate-x-1/2 border-4 border-white shadow-md z-10 group-hover:scale-110 group-hover:bg-[#a3107c] transition-all duration-300 -translate-x-[24px]">
+                      {step.icon}
+                    </div>
+                    
+                    {/* Content Card */}
+                    <div className={`w-full md:w-[45%] pl-16 md:pl-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
+                      <div className="bg-[#f7f9f9] p-8 rounded-2xl shadow-sm border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <span className="text-primary font-ui font-bold uppercase tracking-widest text-[13px] mb-2 block">{step.year}</span>
+                        <h3 className="text-[24px] font-serif font-bold text-[#2c2d2e] mb-4">{step.title}</h3>
+                        <p className="text-[#666666] font-sans leading-[1.8em]">
+                          {step.content}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Executive Team */}
-      <section className="bg-[#f7f9f9] py-[80px] max-md:py-[48px]">
+      {/* 3. 21st Dev Inspired Executive Team */}
+      <section className="bg-[#f7f9f9] py-24 md:py-32 relative">
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-6">Executive Team</h2>
-            <p className="text-[#666666] font-sans text-[18px] leading-[1.7em]">
-              Thank you to our dedicated volunteers from the community who support our efforts and help drive change
+          <div className="text-center mb-16">
+            <h2 className="text-[40px] md:text-[48px] font-serif font-bold text-[#2c2d2e] mb-4">Our Executive Team</h2>
+            <p className="text-[18px] text-[#666666] font-sans max-w-2xl mx-auto mb-10">
+              Dedicated neighbors volunteering their time and energy to advocate for Buttonwood Hill.
             </p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {team.map((member, i) => (
-              <div key={i} className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100 flex flex-col items-center group">
-                <div className="w-[80px] h-[80px] bg-[#f7f9f9] rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white text-primary transition-colors duration-300">
-                  <User size={36} />
+            {team.map((member, index) => (
+              <div
+                key={index}
+                className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
+              >
+                {/* Background wave animation */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-1/2 origin-bottom scale-y-0 transform rounded-t-full bg-gradient-to-t from-primary/10 to-transparent transition-transform duration-500 ease-out group-hover:scale-y-100"
+                  style={{ transitionDelay: `${index * 50}ms` }}
+                />
+
+                {/* Member Avatar */}
+                <div
+                  className="relative z-10 h-[100px] w-[100px] overflow-hidden rounded-full border-[4px] border-transparent bg-[#f7f9f9] transition-all duration-500 ease-out group-hover:border-primary group-hover:scale-105 flex items-center justify-center mb-6"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <User className="w-10 h-10 text-primary opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <h3 className="text-[22px] font-serif font-bold text-primary mb-2">{member.name}</h3>
-                <p className="font-ui uppercase tracking-[1px] text-[12px] text-[#666666] font-bold">{member.role}</p>
+
+                <h3 className="relative z-10 text-[20px] font-serif font-bold text-[#2c2d2e] mb-1 group-hover:text-primary transition-colors">
+                  {member.name}
+                </h3>
+                <p className="relative z-10 text-[12px] font-ui uppercase tracking-widest text-[#666666] font-bold">
+                  {member.role}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. Community Projects */}
-      <section className="bg-white py-[80px] max-md:py-[48px]">
-        <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-16 text-center">Community Projects</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {projects.map((proj) => (
-              <div key={proj.name} className="bg-[#f7f9f9] p-8 md:p-10 rounded-[8px] shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col border border-transparent hover:border-gray-200">
-                <h3 className="text-[26px] font-serif font-bold text-primary mb-4 leading-[1.3]">{proj.name}</h3>
-                <p className="text-[#666666] text-[16px] leading-[1.7em] font-sans mb-8 flex-grow">{proj.desc}</p>
-                <div className="mt-auto">
-                  <Link href={`/projects#${proj.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="text-primary font-ui font-bold uppercase tracking-[1px] text-[14px] hover:text-accent transition-colors duration-300 flex items-center">
-                    Learn More <span className="ml-2">→</span>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* 4. Link to Community Projects */}
+      <section className="bg-primary py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10 mix-blend-multiply pointer-events-none"></div>
+        <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-[36px] md:text-[48px] font-serif font-bold text-white mb-6">Explore Our Community Projects</h2>
+          <p className="text-[18px] text-white/90 font-sans max-w-2xl mx-auto mb-10">
+            We actively monitor local developments ranging from the Buttonwood Hill property out to the Eglinton West LRT. See what we are fighting for today.
+          </p>
+          <Link 
+            href="/projects" 
+            className="inline-flex items-center gap-3 bg-white text-primary font-ui font-bold uppercase tracking-[1px] px-8 py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+          >
+            Review Projects Data
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </Link>
         </div>
       </section>
+
     </div>
   );
 }
