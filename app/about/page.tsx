@@ -78,7 +78,7 @@ export default function AboutPage() {
 
           <div className="relative max-w-3xl mx-auto">
             {/* Vertical Line */}
-            <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-[#f7f9f9] md:-translate-x-1/2"></div>
+            <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-primary/20 md:-translate-x-1/2 rounded-full"></div>
 
             <div className="space-y-12 md:space-y-24">
               {timelineSteps.map((step, index) => {
@@ -103,6 +103,32 @@ export default function AboutPage() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Memory Strip */}
+      <section className="py-8 bg-white border-y border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 mt-8">
+            <h2 className="text-[32px] md:text-[40px] font-serif font-bold text-[#2c2d2e] mb-4">Our Community In Action</h2>
+            <p className="text-[18px] text-[#666666] font-sans max-w-2xl mx-auto">
+              Memories from our annual neighborhood picnics and gatherings.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="relative h-[280px] md:h-[400px] bg-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-primary/20">
+              <Image src="/images/about/picnic1.jpg" alt="BHRA Picnic Gathering" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-[#9b287b]/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative h-[280px] md:h-[400px] bg-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-primary/20">
+              <Image src="/images/about/picnic2.jpg" alt="BHRA Picnic Attendees" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-[#9b287b]/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative h-[280px] md:h-[400px] bg-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-primary/20">
+              <Image src="/images/about/picnic3.jpg" alt="BHRA Picnic Family" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-[#9b287b]/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
         </div>
