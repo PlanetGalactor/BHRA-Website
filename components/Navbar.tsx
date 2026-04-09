@@ -32,7 +32,7 @@ export default function Navbar() {
           </div>
           
           {/* Center Links */}
-          <div className="hidden lg:flex items-center flex-1 justify-center gap-[40px]">
+          <div className="hidden lg:flex items-center justify-center gap-[24px] xl:gap-[40px]">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
