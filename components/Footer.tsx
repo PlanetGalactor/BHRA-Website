@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <Link
               href="/get-involved"
-              className="bg-transparent text-white font-ui font-bold uppercase tracking-[1px] text-[14px] px-[24px] py-[10px] rounded-[4px] border-2 border-white hover:bg-white hover:text-[#2c2d2e] transition-all duration-300"
+              className="bg-[#2ea3f2] text-white font-ui font-bold uppercase tracking-[1px] text-[14px] px-[24px] py-[10px] rounded-[4px] border-none hover:opacity-90 transition-all duration-300"
               style={{ color: '#ffffff' }}
             >
               Get Involved
@@ -64,10 +64,7 @@ export default function Footer() {
                   Buttonwoodhillresidents@gmail.com
                 </a>
               </div>
-              <div className="flex items-start">
-                <span className="font-bold w-16 opacity-90 inline-block">Phone:</span>
-                <span className="opacity-90 inline-block text-white" style={{ color: '#ffffff' }}>416-436-2675</span>
-              </div>
+
             </div>
             
             <div className="flex space-x-4">
