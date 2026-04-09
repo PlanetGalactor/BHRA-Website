@@ -55,12 +55,20 @@ export default function NewsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header Section */}
-      <section className="bg-white py-[80px] max-md:py-[48px]">
-        <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-6">
+      <section className="relative w-full min-h-[400px] flex items-center justify-center overflow-hidden">
+        <Image 
+          src="/images/news-hero.jpg" 
+          alt="News and Media Hero" 
+          fill 
+          priority 
+          className="object-cover object-center absolute inset-0 z-0" 
+        />
+        <div className="absolute inset-0 bg-[rgba(0,0,0,0.65)] z-10"></div>
+        <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-[80px] max-md:py-[48px]">
+          <h1 className="text-[48px] max-md:text-[36px] font-serif font-bold text-white mb-6 drop-shadow-md">
             News & Media
           </h1>
-          <p className="text-[18px] text-[#666666] font-sans max-w-2xl mx-auto leading-[1.7em]">
+          <p className="text-[18px] text-white/90 font-sans max-w-2xl mx-auto leading-[1.7em] drop-shadow">
             Latest updates, community news, and active developments in Buttonwood Hill.
           </p>
         </div>
