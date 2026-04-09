@@ -173,20 +173,20 @@ export default function NewsPage() {
       </section>
 
       {/* Media & Photos Section */}
-      <section className="bg-white py-[80px] max-md:py-[48px]">
+      <section className="bg-primary py-[80px] max-md:py-[48px]">
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-4">Media & Photos</h2>
-            <p className="text-[18px] text-[#666666] font-sans mb-10">
+            <h2 className="text-[48px] max-md:text-[36px] font-serif font-bold text-white mb-4">Media & Photos</h2>
+            <p className="text-[18px] text-white/90 font-sans mb-10">
               Photo albums from past community events.
             </p>
             
-            <div className="bg-[#f7f9f9] p-16 rounded-[8px] border-2 border-dashed border-gray-200 text-center flex flex-col items-center justify-center max-w-3xl mx-auto">
-              <div className="w-[80px] h-[80px] bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-[#9b287b] opacity-60">
+            <div className="bg-white/10 p-16 rounded-[8px] border-2 border-dashed border-white/20 text-center flex flex-col items-center justify-center max-w-3xl mx-auto backdrop-blur-sm">
+              <div className="w-[80px] h-[80px] bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-primary">
                 <ImageIcon size={40} />
               </div>
-              <h3 className="text-[26px] font-serif font-bold text-[#666666] mb-4">Coming Soon</h3>
-              <p className="text-[#666666] text-[16px] leading-[1.7em] max-w-md mx-auto">
+              <h3 className="text-[26px] font-serif font-bold text-white mb-4">Coming Soon</h3>
+              <p className="text-white/90 text-[16px] leading-[1.7em] max-w-md mx-auto">
                 We are currently gathering our event photos to showcase our vibrant community here. Check back soon!
               </p>
             </div>

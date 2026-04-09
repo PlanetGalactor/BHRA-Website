@@ -17,14 +17,14 @@ export default function GetInvolvedPage() {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
               <a 
                 href="mailto:Buttonwoodhillresidents@gmail.com" 
-                className="text-primary font-ui font-bold uppercase tracking-[1px] text-[16px] hover:text-[#a3107c] transition-colors border-b-2 border-transparent hover:border-[#a3107c]"
+                className="bg-primary text-white font-ui font-bold uppercase tracking-[1px] text-[16px] px-8 py-4 rounded-md shadow-md hover:bg-[#a3107c] hover:shadow-lg transition-all"
+                style={{ color: '#ffffff' }}
               >
                 Email Us
               </a>
-              <span className="hidden sm:block text-gray-300">|</span>
               <a 
-                href="#"
-                className="flex items-center text-primary font-ui font-bold uppercase tracking-[1px] text-[16px] hover:text-[#a3107c] transition-colors border-b-2 border-transparent hover:border-[#a3107c]"
+                href="/get-involved"
+                className="flex items-center bg-transparent text-primary font-ui font-bold uppercase tracking-[1px] text-[16px] px-8 py-4 rounded-md border-2 border-primary hover:bg-primary hover:text-white transition-all shadow-sm"
               >
                 <Download size={18} className="mr-2" /> Download Membership Form
               </a>
@@ -34,7 +34,7 @@ export default function GetInvolvedPage() {
       </section>
 
       {/* Membership Form Section */}
-      <section className="bg-white py-[80px] max-md:py-[48px]">
+      <section className="bg-primary py-[80px] max-md:py-[48px]">
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-[640px] mx-auto bg-white p-8 md:p-12 rounded-[8px] shadow-lg border border-[#f7f9f9]">
             
