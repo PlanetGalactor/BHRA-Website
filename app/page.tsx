@@ -185,26 +185,26 @@ export default function Home() {
       </section>
 
       {/* Premium Section 4 - Contact Us */}
-      <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
+      <section className="relative py-24 lg:py-32 bg-[#9b287b] overflow-hidden">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 bg-[#f7f9f9] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
+        <div className="absolute inset-0 bg-white/5 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
         
         <div className="max-w-[1200px] relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <div className="inline-block mb-4 px-4 py-1.5 bg-[#9b287b]/10 rounded-full">
-              <span className="text-[13px] font-bold tracking-[2px] uppercase text-[#9b287b]">Let's Start a Conversation</span>
+            <div className="inline-block mb-4 px-4 py-1.5 bg-white/20 rounded-full">
+              <span className="text-[13px] font-bold tracking-[2px] uppercase text-white">Let's Start a Conversation</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-[#2c2d2e]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-white">
               Get in Touch
             </h2>
-            <p className="text-lg text-[#666666] font-sans">
+            <p className="text-lg text-white/90 font-sans">
               We're here to help and answer any question you might have. We look forward to hearing from you.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             <div className="lg:col-span-2 space-y-6">
-              <div className="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+              <div className="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.1)] border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                 <h3 className="text-2xl font-serif font-bold text-[#2c2d2e] mb-8">Contact Information</h3>
                 <div className="space-y-8">
                   <div className="flex items-start gap-5 group">
@@ -232,7 +232,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="p-8 bg-gradient-to-br from-[#9b287b]/5 to-[#9b287b]/10 rounded-3xl border border-[#9b287b]/20">
+              <div className="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.1)] border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                 <h3 className="text-[20px] font-serif font-bold text-[#2c2d2e] mb-5">Why Join Us?</h3>
                 <ul className="space-y-4 text-[15px] text-[#2c2d2e]">
                   <li className="flex items-start gap-3">
