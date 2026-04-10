@@ -184,185 +184,127 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Premium Section 4 - Get In Touch */}
-      <section className="relative py-24 px-4 bg-[#f7f9f9] overflow-hidden">
+      {/* Premium Section 4 - Contact Us */}
+      <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
         {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] rounded-full bg-[#9b287b]/5 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[600px] rounded-full bg-[#2ea3f2]/5 blur-3xl"></div>
+        <div className="absolute inset-0 bg-[#f7f9f9] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
         
-        <div className="relative max-w-[1200px] w-full mx-auto text-center mb-16">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#9b287b]/10 text-[#9b287b] text-sm font-bold uppercase tracking-wider mb-6 border border-[#9b287b]/20">
-            Get In Touch
+        <div className="max-w-[1200px] relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="inline-block mb-4 px-4 py-1.5 bg-[#9b287b]/10 rounded-full">
+              <span className="text-[13px] font-bold tracking-[2px] uppercase text-[#9b287b]">Let's Start a Conversation</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-[#2c2d2e]">
+              Get in Touch
+            </h2>
+            <p className="text-lg text-[#666666] font-sans">
+              We're here to help and answer any question you might have. We look forward to hearing from you.
+            </p>
           </div>
-          <h2 className="text-[40px] md:text-[56px] font-serif font-bold text-[#2c2d2e] mb-6 leading-tight">
-            Let's Start a <span className="text-[#9b287b]">Conversation</span>
-          </h2>
-          <p className="text-lg text-[#666666] font-sans max-w-2xl mx-auto">
-            Have any questions or concerns regarding our community? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-          </p>
-        </div>
 
-        <div className="relative max-w-[1200px] w-full mx-auto shadow-2xl shadow-[#2c2d2e]/5 rounded-3xl overflow-hidden bg-white border border-[#f7f9f9]">
-          <div className="grid lg:grid-cols-5 items-stretch">
-            
-            {/* Premium Left Column */}
-            <div className="lg:col-span-2 bg-gradient-to-br from-[#9b287b] to-[#7a1f60] p-10 md:p-14 text-white relative overflow-hidden flex flex-col justify-between">
-              {/* Subtle decorative circles */}
-              <div className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 -translate-x-1/4 translate-y-1/4 w-48 h-48 bg-[#2ea3f2]/20 rounded-full blur-2xl pointer-events-none"></div>
-              
-              <div className="relative z-10">
-                <h3 className="font-serif font-bold text-[36px] mb-4">Contact Information</h3>
-                <p className="text-white/80 font-sans text-[16px] leading-[1.7em] mb-12">
-                  We're here to help and answer any question you might have. We look forward to hearing from you.
-                </p>
-                
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+            <div className="lg:col-span-2 space-y-6">
+              <div className="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-2xl font-serif font-bold text-[#2c2d2e] mb-8">Contact Information</h3>
                 <div className="space-y-8">
-                  {/* Item */}
-                  <div className="flex items-start gap-5">
-                    <div className="p-3.5 bg-white/10 rounded-full group hover:bg-white/20 transition-all duration-300">
-                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                  <div className="flex items-start gap-5 group">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#f7f9f9] flex items-center justify-center group-hover:bg-[#9b287b]/10 transition-colors">
+                      <svg className="w-5 h-5 text-[#9b287b]" fill="currentColor" viewBox="0 0 24 24"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
                     </div>
-                    <div>
-                      <h4 className="text-white/70 text-[13px] font-bold uppercase tracking-widest mb-1">Email Us</h4>
-                      <a href="mailto:Buttonwoodhillresidents@gmail.com" className="text-[16px] font-sans hover:underline underline-offset-4 decoration-white/50 break-all">
+                    <div className="flex-1 min-w-0 pt-1">
+                      <p className="text-[12px] font-bold uppercase tracking-widest text-[#666666] mb-1">Email</p>
+                      <a href="mailto:Buttonwoodhillresidents@gmail.com" className="text-base font-medium text-[#2c2d2e] hover:text-[#9b287b] break-all transition-colors">
                         Buttonwoodhillresidents@<wbr/>gmail.com
                       </a>
                     </div>
                   </div>
-                  {/* Item */}
-                  <div className="flex items-start gap-5">
-                    <div className="p-3.5 bg-white/10 rounded-full group hover:bg-white/20 transition-all duration-300">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  <div className="flex items-start gap-5 group">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#f7f9f9] flex items-center justify-center group-hover:bg-[#9b287b]/10 transition-colors">
+                      <svg className="w-5 h-5 text-[#9b287b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     </div>
-                    <div>
-                      <h4 className="text-white/70 text-[13px] font-bold uppercase tracking-widest mb-1">Call Us</h4>
-                      <div className="text-[16px] font-sans">
+                    <div className="flex-1 min-w-0 pt-1">
+                      <p className="text-[12px] font-bold uppercase tracking-widest text-[#666666] mb-1">Phone</p>
+                      <p className="text-base font-medium text-[#2c2d2e]">
                         416-436-2675
-                      </div>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Bottom CTA */}
-              <div className="relative z-10 mt-16 pt-10 border-t border-white/20">
-                <Link 
-                  href="/get-involved" 
-                  className="inline-flex items-center gap-3 text-white font-ui font-bold text-[14px] uppercase tracking-[1px] group"
-                >
-                  <div className="w-8 h-8 rounded-full bg-white text-[#9b287b] flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"/></svg>
-                  </div>
-                  Become a Member Today
-                </Link>
+              <div className="p-8 bg-gradient-to-br from-[#9b287b]/5 to-[#9b287b]/10 rounded-3xl border border-[#9b287b]/20">
+                <h3 className="text-[20px] font-serif font-bold text-[#2c2d2e] mb-5">Why Join Us?</h3>
+                <ul className="space-y-4 text-[15px] text-[#2c2d2e]">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#9b287b] font-bold mt-0.5">✓</span>
+                    <span>Stay informed on local developments</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#9b287b] font-bold mt-0.5">✓</span>
+                    <span>Make your community voice heard</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#9b287b] font-bold mt-0.5">✓</span>
+                    <span>Attend our neighborhood events</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            {/* Premium Right Column Form */}
-            <div className="lg:col-span-3 p-10 md:p-14 bg-white relative">
-              <form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST" className="space-y-8 flex flex-col h-full justify-center">
-                {/* Replace REPLACE_WITH_FORMSPREE_ID with your actual Formspree form ID */}
-                <div dangerouslySetInnerHTML={{ __html: "<!-- Replace REPLACE_WITH_FORMSPREE_ID with your actual Formspree form ID -->" }}></div>
-                
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="relative group">
-                    <input
-                      type="text"
-                      name="Full Name"
-                      id="name"
-                      required
-                      className="peer w-full bg-transparent border-b-2 border-gray-200 px-0 py-3 text-[#2c2d2e] font-sans placeholder-transparent focus:outline-none focus:border-[#9b287b] transition-all"
-                      placeholder="John Doe"
-                    />
-                    <label 
-                      htmlFor="name" 
-                      className="absolute left-0 -top-3.5 text-[12px] font-bold uppercase tracking-widest text-[#666666] transition-all peer-placeholder-shown:text-[15px] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[12px] peer-focus:text-[#9b287b]"
-                    >
-                      Full Name *
-                    </label>
-                  </div>
-                  <div className="relative group">
-                    <input
-                      type="email"
-                      name="Email Address"
-                      id="email"
-                      required
-                      className="peer w-full bg-transparent border-b-2 border-gray-200 px-0 py-3 text-[#2c2d2e] font-sans placeholder-transparent focus:outline-none focus:border-[#9b287b] transition-all"
-                      placeholder="john@example.com"
-                    />
-                    <label 
-                      htmlFor="email" 
-                      className="absolute left-0 -top-3.5 text-[12px] font-bold uppercase tracking-widest text-[#666666] transition-all peer-placeholder-shown:text-[15px] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[12px] peer-focus:text-[#9b287b]"
-                    >
-                      Email Address *
-                    </label>
-                  </div>
+            <div className="lg:col-span-3">
+              <div className="p-8 lg:p-12 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
+                <div className="mb-10">
+                  <h3 className="text-3xl lg:text-[32px] font-serif font-bold text-[#2c2d2e] mb-3">Send us a message</h3>
+                  <p className="text-[#666666]">Fill out the form below and we'll get back to you as soon as possible.</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="relative group">
-                    <input
-                      type="tel"
-                      name="Phone Number"
-                      id="phone"
-                      className="peer w-full bg-transparent border-b-2 border-gray-200 px-0 py-3 text-[#2c2d2e] font-sans placeholder-transparent focus:outline-none focus:border-[#9b287b] transition-all"
-                      placeholder="416-555-0123"
-                    />
-                    <label 
-                      htmlFor="phone" 
-                      className="absolute left-0 -top-3.5 text-[12px] font-bold uppercase tracking-widest text-[#666666] transition-all peer-placeholder-shown:text-[15px] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[12px] peer-focus:text-[#9b287b]"
-                    >
-                      Phone Number
-                    </label>
+                <form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST" className="space-y-8">
+                  <div dangerouslySetInnerHTML={{ __html: "<!-- Replace REPLACE_WITH_FORMSPREE_ID with your actual Formspree form ID -->" }}></div>
+                  
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="space-y-2.5">
+                      <label htmlFor="firstName" className="text-[12px] font-bold uppercase tracking-widest text-[#2c2d2e]">First Name *</label>
+                      <input id="firstName" name="First Name" required className="w-full h-12 rounded-lg border border-gray-200 bg-[#f7f9f9] px-4 font-sans text-base transition-colors focus:border-[#9b287b] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#9b287b]/20" placeholder="John" />
+                    </div>
+                    <div className="space-y-2.5">
+                      <label htmlFor="lastName" className="text-[12px] font-bold uppercase tracking-widest text-[#2c2d2e]">Last Name *</label>
+                      <input id="lastName" name="Last Name" required className="w-full h-12 rounded-lg border border-gray-200 bg-[#f7f9f9] px-4 font-sans text-base transition-colors focus:border-[#9b287b] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#9b287b]/20" placeholder="Doe" />
+                    </div>
                   </div>
-                  <div className="relative group">
-                    <input
-                      type="text"
-                      name="Subject"
-                      id="subject"
-                      required
-                      className="peer w-full bg-transparent border-b-2 border-gray-200 px-0 py-3 text-[#2c2d2e] font-sans placeholder-transparent focus:outline-none focus:border-[#9b287b] transition-all"
-                      placeholder="How can we help?"
-                    />
-                    <label 
-                      htmlFor="subject" 
-                      className="absolute left-0 -top-3.5 text-[12px] font-bold uppercase tracking-widest text-[#666666] transition-all peer-placeholder-shown:text-[15px] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[12px] peer-focus:text-[#9b287b]"
-                    >
-                      Subject *
-                    </label>
+
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="space-y-2.5">
+                      <label htmlFor="email" className="text-[12px] font-bold uppercase tracking-widest text-[#2c2d2e]">Email Address *</label>
+                      <input id="email" name="Email" type="email" required className="w-full h-12 rounded-lg border border-gray-200 bg-[#f7f9f9] px-4 font-sans text-base transition-colors focus:border-[#9b287b] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#9b287b]/20" placeholder="john@example.com" />
+                    </div>
+                    <div className="space-y-2.5">
+                      <label htmlFor="phone" className="text-[12px] font-bold uppercase tracking-widest text-[#2c2d2e]">Phone Number</label>
+                      <input id="phone" name="Phone" type="tel" className="w-full h-12 rounded-lg border border-gray-200 bg-[#f7f9f9] px-4 font-sans text-base transition-colors focus:border-[#9b287b] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#9b287b]/20" placeholder="+1 (555) 123-4567" />
+                    </div>
                   </div>
-                </div>
 
-                <div className="relative group pt-4">
-                  <textarea
-                    name="Message"
-                    id="message"
-                    required
-                    placeholder="Tell us what's on your mind..."
-                    rows={4}
-                    className="peer w-full bg-transparent border-b-2 border-gray-200 px-0 py-3 text-[#2c2d2e] font-sans placeholder-transparent focus:outline-none focus:border-[#9b287b] transition-all resize-none"
-                  ></textarea>
-                  <label 
-                    htmlFor="message" 
-                    className="absolute left-0 top-0 text-[12px] font-bold uppercase tracking-widest text-[#666666] transition-all peer-placeholder-shown:text-[15px] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-7 peer-focus:top-0 peer-focus:text-[12px] peer-focus:text-[#9b287b]"
-                  >
-                    Your Message *
-                  </label>
-                </div>
+                  <div className="space-y-2.5">
+                    <label htmlFor="subject" className="text-[12px] font-bold uppercase tracking-widest text-[#2c2d2e]">Subject *</label>
+                    <input id="subject" name="Subject" required className="w-full h-12 rounded-lg border border-gray-200 bg-[#f7f9f9] px-4 font-sans text-base transition-colors focus:border-[#9b287b] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#9b287b]/20" placeholder="How can we help?" />
+                  </div>
 
-                <div className="pt-4">
-                  <button
-                    type="submit"
-                    className="group inline-flex items-center justify-center gap-3 bg-[#2c2d2e] text-white font-ui font-bold uppercase tracking-[1.5px] text-[14px] px-10 py-5 rounded-full hover:bg-[#9b287b] transition-all duration-500 w-full md:w-auto"
-                  >
-                    Send Message
-                    <svg className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                  </button>
-                </div>
-              </form>
+                  <div className="space-y-2.5">
+                    <label htmlFor="message" className="text-[12px] font-bold uppercase tracking-widest text-[#2c2d2e]">Message *</label>
+                    <textarea id="message" name="Message" required rows={5} className="w-full rounded-lg border border-gray-200 bg-[#f7f9f9] p-4 font-sans text-base transition-colors resize-none focus:border-[#9b287b] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#9b287b]/20" placeholder="Tell us what's on your mind..."></textarea>
+                  </div>
+
+                  <div className="pt-2">
+                    <button type="submit" className="w-full sm:w-auto h-14 bg-[#9b287b] px-10 text-white font-ui font-bold uppercase tracking-[2px] text-[15px] rounded-lg border border-transparent hover:bg-[#a3107c] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                      Send Message
+                    </button>
+                  </div>
+                  
+                  <p className="text-xs text-[#666666]">
+                    By submitting this form, you agree to our privacy policy and terms of service.
+                  </p>
+                </form>
+              </div>
             </div>
-
           </div>
         </div>
       </section>
