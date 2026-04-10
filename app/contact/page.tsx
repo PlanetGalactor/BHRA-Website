@@ -11,7 +11,7 @@ export default function ContactPage() {
             
             <div className="mt-8 space-y-6">
               <div>
-                <h3 className="text-xl font-serif text-primary mb-2">Our Neighborhood</h3>
+                <h3 className="text-xl font-serif text-primary mb-2">Our Neighbourhood</h3>
                 <p className="text-foreground">Buttonwood Hill<br/>Etobicoke, ON</p>
               </div>
             </div>

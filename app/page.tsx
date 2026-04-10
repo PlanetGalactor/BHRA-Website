@@ -90,7 +90,7 @@ export default function Home() {
               </div>
               <h3 className="text-[26px] font-serif font-bold text-[#9b287b] mb-4">Who We Are</h3>
               <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] line-clamp-2">
-                A dedicated group of neighbors working together to build a vibrant community in Buttonwood Hill.
+                A dedicated group of neighbours working together to build a vibrant community in Buttonwood Hill.
               </p>
             </div>
             {/* Card 2 */}
@@ -110,7 +110,7 @@ export default function Home() {
               </div>
               <h3 className="text-[26px] font-serif font-bold text-[#9b287b] mb-4">Get Involved</h3>
               <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] line-clamp-2">
-                Become a member, attend our meetings, and volunteer to make our neighborhood even better.
+                Become a member, attend our meetings, and volunteer to make our neighbourhood even better.
               </p>
             </div>
           </div>

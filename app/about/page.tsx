@@ -113,7 +113,7 @@ export default function AboutPage() {
           <div className="text-center mb-10 mt-8">
             <h2 className="text-[32px] md:text-[40px] font-serif font-bold text-[#2c2d2e] mb-4">Our Community In Action</h2>
             <p className="text-[18px] text-[#666666] font-sans max-w-2xl mx-auto">
-              Memories from our annual neighborhood picnics and gatherings.
+              Memories from our annual neighbourhood picnics and gatherings.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -139,7 +139,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-[40px] md:text-[48px] font-serif font-bold text-[#2c2d2e] mb-4">Our Executive Team</h2>
             <p className="text-[18px] text-[#666666] font-sans max-w-2xl mx-auto mb-10">
-              Dedicated neighbors volunteering their time and energy to advocate for Buttonwood Hill.
+              Dedicated neighbours volunteering their time and energy to advocate for Buttonwood Hill.
             </p>
           </div>
           
@@ -181,7 +181,7 @@ export default function AboutPage() {
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-[36px] md:text-[48px] font-serif font-bold text-white mb-6">Explore Our Community Projects</h2>
           <p className="text-[18px] text-white/90 font-sans max-w-2xl mx-auto mb-10">
-            We actively monitor local developments ranging from the Buttonwood Hill property out to the Eglinton West LRT. See what we are fighting for today.
+            We actively monitor local developments ranging from the Buttonwood Hill property out to the Eglinton West LRT. See what we are advocating for today.
           </p>
           <Link 
             href="/projects" 

@@ -1,5 +1,5 @@
 ---
-title: "Letter to Councillor Holyday &amp; Toronto City Council Dec 17 2024"
+title: "Letter to Councillor Holyday & Toronto City Council — Dec 17, 2024"
 date: "2025-04-07 02:44:37"
 category: "Other Developments"
 excerpt: " Get in Touch. Get Involved. Have any questions or concerns regarding our community?facebook "

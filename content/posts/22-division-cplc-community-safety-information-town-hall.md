@@ -1,5 +1,5 @@
 ---
-title: "22 Division CPLC Community Safety &amp; Information Town Hall"
+title: "22 Division CPLC Community Safety & Information Town Hall"
 date: "2024-05-05 14:44:42"
 category: "Other Developments"
 excerpt: " Get in Touch. Get Involved. Have any questions or concerns regarding our community?facebook "

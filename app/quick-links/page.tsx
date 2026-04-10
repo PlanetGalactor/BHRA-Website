@@ -82,7 +82,7 @@ export default function QuickLinksPage() {
         <div className="absolute inset-0 bg-black/10 mix-blend-multiply z-0"></div>
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-[48px] max-md:text-[36px] font-serif font-bold text-white mb-6">
-            Quick Links & Community Resources
+            Key Resources & Community Resources
           </h1>
           <p className="text-[20px] text-white/90 font-sans max-w-2xl mx-auto leading-[1.7em]">
             Helpful links for Buttonwood Hill residents.

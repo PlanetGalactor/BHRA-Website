@@ -27,9 +27,9 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Column 2: Key Resources */}
           <div className="flex flex-col text-left">
-            <h3 className="font-ui font-bold uppercase tracking-[2px] text-[16px] text-white mb-6">Quick Links</h3>
+            <h3 className="font-ui font-bold uppercase tracking-[2px] text-[16px] text-white mb-6">Key Resources</h3>
             <ul className="space-y-4 font-sans text-[16px]">
               <li>
                 <Link href="/about" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/quick-links" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
-                  Community Quick Links
+                  Key Resources
                 </Link>
               </li>
               <li>

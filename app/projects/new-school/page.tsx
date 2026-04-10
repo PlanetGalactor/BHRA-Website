@@ -15,7 +15,7 @@ export default function ButtonwoodPropertyProjectPage() {
   ];
 
   const allPosts = getSortedPostsData();
-  const relatedPosts = allPosts.filter(p => p.category === "Buttonwood Hill Property").slice(0, 3);
+  const relatedPosts = allPosts.filter(p => p.category === "New School").slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -24,7 +24,7 @@ export default function ButtonwoodPropertyProjectPage() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/projects/buttonwood.png" 
-            alt="Buttonwood Hill Property" 
+            alt="New School" 
             fill 
             className="object-cover opacity-30 mix-blend-overlay"
           />
@@ -40,7 +40,7 @@ export default function ButtonwoodPropertyProjectPage() {
             </span>
           </div>
           <h1 className="text-[40px] md:text-[56px] font-serif font-bold text-white mb-6 leading-[1.1]">
-            Buttonwood Hill Property
+            New School
           </h1>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function ButtonwoodPropertyProjectPage() {
           <div className="space-y-8 text-[#4a4a4a] font-sans text-[18px] leading-[1.8em]">
             <h2 className="text-[32px] font-serif font-bold text-primary mb-6">About the Project</h2>
             <p className="text-[20px] font-medium text-[#2c2d2e] leading-relaxed">
-              The Buttonwood Hill Property is our neighborhood&apos;s focal point. Currently, the most active initiative is the Buttonwood Park Improvements Project.
+              The New School is our neighbourhood&apos;s focal point. Currently, the most active initiative is the Buttonwood Park Improvements Project.
             </p>
             <p>
               The City of Toronto is undertaking significant improvements to Buttonwood Park, located near Royal York Road and Eglinton Avenue West. As our neighbourhood expands, ensuring our local green space serves the diverse needs of families, children, and seniors is a top priority.
