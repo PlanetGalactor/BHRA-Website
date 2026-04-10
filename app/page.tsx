@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Section 2 - About Strip */}
-      <section className="bg-[#f7f9f9] py-[80px] max-md:py-[48px]">
+      <section className="bg-[#f7f9f9] pt-[80px] pb-[160px] max-md:pt-[48px] max-md:pb-[80px]">
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Card 1 */}
@@ -125,7 +125,7 @@ export default function Home() {
           fill 
           className="object-cover object-center absolute inset-0 z-0" 
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#9b287b]/80 to-[#9b287b]/40 mix-blend-multiply z-10 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#9b287b]/40 to-[#9b287b]/10 mix-blend-multiply z-10 transition-opacity duration-500"></div>
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <div className="text-center px-4">
              {/* Optional text or logo here if desired */}

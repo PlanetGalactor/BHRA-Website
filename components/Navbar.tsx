@@ -32,31 +32,32 @@ export default function Navbar() {
             </Link>
           </div>
           
-          {/* Center Links */}
-          <div className="hidden lg:flex items-center justify-center gap-[24px] xl:gap-[40px]">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`font-ui font-bold uppercase tracking-[2px] text-[14px] transition-colors duration-300 relative group
-                    ${isActive ? "text-primary" : "text-[#2c2d2e] hover:text-primary"}
-                  `}
-                >
-                  {link.name}
-                  {/* Subtle underline hover effect */}
-                  <span className={`absolute left-0 bottom-[-4px] w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ${isActive ? "scale-x-100" : ""}`}></span>
-                </Link>
-              );
-            })}
-          </div>
-          
-          {/* Right Button */}
-          <div className="hidden lg:flex items-center shrink-0">
+          {/* Right Side Nav and CTA */}
+          <div className="hidden lg:flex items-center gap-[24px] xl:gap-[40px]">
+            {/* Nav Links */}
+            <div className="flex items-center gap-[24px] xl:gap-[40px]">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`font-ui font-bold uppercase tracking-[2px] text-[14px] transition-colors duration-300 relative group
+                      ${isActive ? "text-primary" : "text-[#2c2d2e] hover:text-primary"}
+                    `}
+                  >
+                    {link.name}
+                    {/* Subtle underline hover effect */}
+                    <span className={`absolute left-0 bottom-[-4px] w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ${isActive ? "scale-x-100" : ""}`}></span>
+                  </Link>
+                );
+              })}
+            </div>
+            
+            {/* CTA Button */}
             <Link
               href="/contact"
-              className="bg-primary text-white font-ui font-bold uppercase tracking-[2px] text-[14px] px-[24px] py-[10px] rounded-[4px] border-2 border-primary hover:bg-[#a3107c] hover:border-[#a3107c] hover:scale-[1.02] transition-all duration-300 shadow-sm"
+              className="bg-primary text-white font-ui font-bold uppercase tracking-[2px] text-[14px] px-[24px] py-[10px] rounded-[4px] border-2 border-primary hover:bg-[#a3107c] hover:border-[#a3107c] hover:scale-[1.02] transition-colors duration-300 shadow-sm shrink-0"
               style={{ color: '#ffffff' }}
             >
               Contact Us
