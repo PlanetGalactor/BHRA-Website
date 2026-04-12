@@ -8,7 +8,6 @@ export default function AboutPage() {
     { name: "Ela Tkach", role: "Executive Member" },
     { name: "Shabnam Ayough", role: "Executive Member" },
     { name: "Pauline Saliba", role: "Executive Member" },
-    { name: "Nancy Roper", role: "Executive Member" },
   ];
 
   const timelineSteps = [
@@ -66,12 +65,12 @@ export default function AboutPage() {
       </section>
 
       {/* 2. Timeline Journey */}
-      <section className="bg-white py-24 md:py-32 relative overflow-hidden">
+      <section className="bg-white py-12 md:py-16 relative overflow-hidden">
         {/* Subtle background flair */}
         <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-10">
             <h2 className="text-[40px] md:text-[48px] font-serif font-bold text-[#2c2d2e] mb-4">The BHRA Journey</h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -80,22 +79,22 @@ export default function AboutPage() {
             {/* Vertical Line */}
             <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-primary/20 md:-translate-x-1/2 rounded-full"></div>
 
-            <div className="space-y-12 md:space-y-24">
+            <div className="space-y-6 md:space-y-10">
               {timelineSteps.map((step, index) => {
                 const isEven = index % 2 === 0;
                 return (
                   <div key={index} className={`relative flex items-center md:justify-between flex-col md:flex-row group ${isEven ? 'md:flex-row-reverse' : ''}`}>
                     {/* Center Icon */}
-                    <div className="absolute left-[28px] md:left-1/2 w-14 h-14 bg-primary rounded-full flex items-center justify-center md:-translate-x-1/2 border-4 border-white shadow-md z-10 group-hover:scale-110 group-hover:bg-[#a3107c] transition-all duration-300 -translate-x-[24px]">
+                    <div className="absolute left-[28px] md:left-1/2 w-12 h-12 bg-primary rounded-full flex items-center justify-center md:-translate-x-1/2 border-4 border-white shadow-md z-10 group-hover:scale-110 group-hover:bg-[#a3107c] transition-all duration-300 -translate-x-[24px]">
                       {step.icon}
                     </div>
                     
                     {/* Content Card */}
                     <div className={`w-full md:w-[45%] pl-16 md:pl-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
-                      <div className="bg-[#f7f9f9] p-8 rounded-2xl shadow-sm border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <span className="text-primary font-ui font-bold uppercase tracking-widest text-[13px] mb-2 block">{step.year}</span>
-                        <h3 className="text-[24px] font-serif font-bold text-[#2c2d2e] mb-4">{step.title}</h3>
-                        <p className="text-[#666666] font-sans leading-[1.8em]">
+                      <div className="bg-[#f7f9f9] p-5 rounded-2xl shadow-sm border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <span className="text-primary font-ui font-bold uppercase tracking-widest text-[13px] mb-1 block">{step.year}</span>
+                        <h3 className="text-[20px] font-serif font-bold text-[#2c2d2e] mb-2">{step.title}</h3>
+                        <p className="text-[#666666] font-sans text-[15px] leading-[1.7em]">
                           {step.content}
                         </p>
                       </div>
@@ -144,26 +143,23 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {team.map((member, index) => (
+          {/* Row 1: first 3 members */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+            {team.slice(0, 3).map((member, index) => (
               <div
                 key={index}
                 className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
               >
-                {/* Background wave animation */}
                 <div
                   className="absolute bottom-0 left-0 right-0 h-1/2 origin-bottom scale-y-0 transform rounded-t-full bg-gradient-to-t from-primary/10 to-transparent transition-transform duration-500 ease-out group-hover:scale-y-100"
                   style={{ transitionDelay: `${index * 50}ms` }}
                 />
-
-                {/* Member Avatar */}
                 <div
                   className="relative z-10 h-[100px] w-[100px] overflow-hidden rounded-full border-[4px] border-transparent bg-[#f7f9f9] transition-all duration-500 ease-out group-hover:border-primary group-hover:scale-105 flex items-center justify-center mb-6"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <User className="w-10 h-10 text-primary opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-
                 <h3 className="relative z-10 text-[20px] font-serif font-bold text-[#2c2d2e] mb-1 group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
@@ -172,8 +168,32 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-            {/* Blank 6th card to complete 3x2 grid */}
-            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg border border-gray-100 opacity-30" />
+          </div>
+          {/* Row 2: last member + blank card, centred */}
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            {team.slice(3).map((member, index) => (
+              <div
+                key={index}
+                className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100 sm:w-[calc(33.333%-12px)]"
+              >
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-1/2 origin-bottom scale-y-0 transform rounded-t-full bg-gradient-to-t from-primary/10 to-transparent transition-transform duration-500 ease-out group-hover:scale-y-100"
+                />
+                <div
+                  className="relative z-10 h-[100px] w-[100px] overflow-hidden rounded-full border-[4px] border-transparent bg-[#f7f9f9] transition-all duration-500 ease-out group-hover:border-primary group-hover:scale-105 flex items-center justify-center mb-6"
+                >
+                  <User className="w-10 h-10 text-primary opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <h3 className="relative z-10 text-[20px] font-serif font-bold text-[#2c2d2e] mb-1 group-hover:text-primary transition-colors">
+                  {member.name}
+                </h3>
+                <p className="relative z-10 text-[12px] font-ui uppercase tracking-widest text-[#666666] font-bold">
+                  {member.role}
+                </p>
+              </div>
+            ))}
+            {/* Blank 5th card */}
+            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg border border-gray-100 opacity-30 sm:w-[calc(33.333%-12px)]" />
           </div>
         </div>
       </section>

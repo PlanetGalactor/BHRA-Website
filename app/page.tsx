@@ -103,16 +103,19 @@ export default function Home() {
                 Advocate for local issues, host events, and keep our residents informed and deeply connected.
               </p>
             </div>
-            {/* Card 3 */}
-            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-              <div className="w-16 h-16 bg-[#f7f9f9] text-[#9b287b] rounded-full flex items-center justify-center mb-6 flex-shrink-0">
+            {/* Card 3 — clickable link to Get Involved page */}
+            <Link
+              href="/get-involved"
+              className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+            >
+              <div className="w-16 h-16 bg-[#f7f9f9] text-[#9b287b] rounded-full flex items-center justify-center mb-6 flex-shrink-0 group-hover:bg-[#9b287b] group-hover:text-white transition-colors duration-300">
                 <ArrowRight size={32} />
               </div>
-              <h3 className="text-[26px] font-serif font-bold text-[#9b287b] mb-4">Get Involved</h3>
+              <h3 className="text-[26px] font-serif font-bold text-[#9b287b] mb-4 group-hover:text-[#7a1f60] transition-colors duration-300">Get Involved</h3>
               <p className="text-[#666666] font-sans text-[16px] leading-[1.7em]">
                 Become a member, attend our meetings, and volunteer to make our neighbourhood even better.
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -245,7 +248,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#9b287b] font-bold mt-0.5">✓</span>
-                    <span>Attend our neighborhood events</span>
+                    <span>Attend our neighbourhood events</span>
                   </li>
                 </ul>
               </div>

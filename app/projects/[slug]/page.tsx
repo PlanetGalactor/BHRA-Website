@@ -49,7 +49,6 @@ const PROJECTS: {
     links: [
       { label: "Humbertown Mall Renovations", href: "https://www.humbertown.com/2025/09/30/renovations/" },
       { label: "Loblaws Humbertown Update", href: "https://www.facebook.com/loblaws1174/posts/1475096497736688/" },
-      { label: "Humbertown Redevelopment \u2014 GTA Homes", href: "https://www.gtahomes.com/humbertown-redevelopment/" },
     ],
   },
   {
