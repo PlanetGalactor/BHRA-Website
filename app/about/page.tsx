@@ -6,8 +6,8 @@ export default function AboutPage() {
   const team = [
     { name: "Shabnam Ayough", role: "Executive Member" },
     { name: "Christina Manulak", role: "President" },
-    { name: "Ela Tkach", role: "Executive Member" },
     { name: "Pauline Saliba", role: "Executive Member" },
+    { name: "Ela Tkach", role: "Executive Member" },
   ];
 
   const timelineSteps = [
@@ -143,9 +143,9 @@ export default function AboutPage() {
             </p>
           </div>
           
-          {/* Row 1: first 3 members */}
+          {/* Row 1: 2 members + blank card */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
-            {team.slice(0, 3).map((member, index) => (
+            {team.slice(0, 2).map((member, index) => (
               <div
                 key={index}
                 className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
@@ -168,10 +168,12 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+            {/* Blank 3rd card in Row 1 */}
+            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg border border-gray-100 opacity-30" />
           </div>
-          {/* Row 2: last member + blank card, centred */}
+          {/* Row 2: remaining 2 members, centred */}
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            {team.slice(3).map((member, index) => (
+            {team.slice(2).map((member, index) => (
               <div
                 key={index}
                 className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100 sm:w-[calc(33.333%-12px)]"
@@ -192,8 +194,6 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-            {/* Blank 5th card */}
-            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg border border-gray-100 opacity-30 sm:w-[calc(33.333%-12px)]" />
           </div>
         </div>
       </section>

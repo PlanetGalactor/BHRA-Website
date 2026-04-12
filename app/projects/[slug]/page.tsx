@@ -2,10 +2,12 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
-import { ArrowLeft, ArrowRight, Building2, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, Building2, ExternalLink, CalendarClock } from "lucide-react";
 import { getSortedPostsData } from "@/lib/markdown";
 
 type ProjectLink = { label: string; href: string };
+
+type TimelineStep = { date: string; event: string };
 
 const PROJECTS: {
   name: string;
@@ -15,15 +17,42 @@ const PROJECTS: {
   ldesc: string;
   image: string;
   links?: ProjectLink[];
+  timeline?: TimelineStep[];
   hideBoilerplate?: boolean;
 }[] = [
   {
-    name: "Buttonwood Hill Property",
+    name: "Buttonwood Park Improvements Project (City of Toronto)",
     category: "Buttonwood Hill Property",
-    slug: "buttonwood-property",
-    desc: "Latest info and hearings regarding the Buttonwood Hill local development initiatives.",
-    ldesc: "The Buttonwood Hill Property represents the core of our neighbourhood focus. Most recently, the City of Toronto is undertaking significant improvements to Buttonwood Park. The park design will be determined through extensive community engagement.",
+    slug: "buttonwood-park",
+    desc: "Major upgrades to Buttonwood Park including improved accessible pathways, a new shade structure, and enhanced lighting.",
+    ldesc: "The City of Toronto is undertaking significant improvements to Buttonwood Park, located near Royal York Road and Eglinton Avenue West. As our neighbourhood expands, ensuring our local green space serves the diverse needs of families, children, and seniors is a top priority.\n\nThe park design is actively being determined through community engagement (Exploring Design Options Phase through Spring 2026). The finalized improvements are proposed to include upgraded accessible pathways, a closed-roof shade structure, increased diverse seating (including accessible seating and tables), and enhanced safety lighting.\n\nThe vision statement co-created with the community establishes that the space will remain a peaceful, natural, and inclusive family-friendly environment that supports health and well-being.",
+    image: "/images/ButtonwoodParkImprovements.jpg",
+    links: [
+      { label: "Buttonwood Park Improvements \u2014 Official City of Toronto Project Page", href: "https://www.toronto.ca/city-government/planning-development/construction-new-facilities/park-facility-projects/buttonwood-park-improvements/" },
+    ],
+    timeline: [
+      { date: "Fall 2025 to Spring 2026", event: "Community engagement and design development (Exploring Options)" },
+      { date: "Spring to Summer 2026", event: "Detailed design phase" },
+      { date: "Summer 2026", event: "Hire a construction team" },
+      { date: "Fall 2026", event: "Construction starts & concludes" }
+    ],
+  },
+  {
+    name: "New School (Former Buttonwood Hill School)",
+    category: "New School",
+    slug: "new-school",
+    desc: "Construction of the New Catholic Elementary School at the former Buttonwood Hill Public School site.",
+    ldesc: "Construction of the new Catholic elementary school in Ward 2 (former Buttonwood Hill Public School site) is currently well underway. This new facility will accommodate 600 students and include a 5-room childcare centre, serving the growing needs of our local families.\n\nProgress is moving steadily with the masonry work approximately 45% complete as of late 2025. The anticipated opening date for the school is September 1, 2027 (with construction targeted for completion in Winter 2027).",
     image: "/images/projects/buttonwood.png",
+    links: [
+      { label: "New School Construction Updates (TCDSB)", href: "https://www.tcdsb.org/o/corporateservices/page/new-schools" },
+    ],
+    timeline: [
+      { date: "September 2019", event: "Former School site closed" },
+      { date: "November 2025", event: "Masonry work 45% complete" },
+      { date: "Winter 2027", event: "Construction target completion" },
+      { date: "September 1, 2027", event: "Anticipated Opening Date" }
+    ],
   },
   {
     name: "Lanterra Developments \u2014 Notting Hill Condos, 4000 Eglinton Avenue West (Plant World)",
@@ -39,7 +68,7 @@ const PROJECTS: {
     ],
   },
   {
-    name: "Humbertown Plaza",
+    name: "Humbertown Plaza & Redevelopment",
     category: "Humbertown Plaza",
     slug: "humbertown-plaza",
     desc: "First Capital are currently revitalizing Humbertown Mall and some shops will remain open during this process. First Capital anticipates the unveiling of the new and improved Humbertown Mall in 2026.",
@@ -47,6 +76,7 @@ const PROJECTS: {
     image: "/images/projects/humbertown.jpg",
     hideBoilerplate: true,
     links: [
+      { label: "Humbertown Redevelopment \u2014 GTA Homes", href: "https://www.gta-homes.com/master-planned-communities/humbertown-redevelopment/" },
       { label: "Humbertown Mall Renovations", href: "https://www.humbertown.com/2025/09/30/renovations/" },
       { label: "Loblaws Humbertown Update", href: "https://www.facebook.com/loblaws1174/posts/1475096497736688/" },
     ],
@@ -82,6 +112,8 @@ const PROJECTS: {
 
 export async function generateStaticParams() {
   return [
+    { slug: "buttonwood-park" },
+    { slug: "new-school" },
     { slug: "plant-world" },
     { slug: "humbertown-plaza" },
     { slug: "eglinton-west-lrt" },
@@ -172,11 +204,38 @@ export default async function DynamicProjectPage({ params }: { params: Promise<{
             </Link>
           </div>
 
-          {/* Sidebar News */}
-          <div className="bg-[#f7f9f9] rounded-2xl p-8 border border-gray-100 self-start sticky top-32">
-            <h3 className="text-[24px] font-serif font-bold text-[#2c2d2e] mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
-              <Building2 className="text-primary" /> Related News
-            </h3>
+          {/* Sidebar */}
+          <div className="space-y-8 self-start sticky top-32">
+            
+            {/* Timeline Widget */}
+            {project.timeline && (
+              <div className="bg-[#f7f9f9] rounded-2xl p-8 border border-gray-100">
+                <h3 className="text-[20px] font-serif font-bold text-[#2c2d2e] mb-6 flex items-center gap-3 border-b border-gray-200 pb-4">
+                  <CalendarClock className="text-primary" /> Project Timeline
+                </h3>
+                <div className="space-y-6">
+                  {project.timeline.map((step, idx) => (
+                    <div key={idx} className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-primary before:rounded-full">
+                      {idx !== project.timeline.length - 1 && (
+                        <div className="absolute left-[3px] top-4 w-[2px] h-[calc(100%+8px)] bg-primary/20"></div>
+                      )}
+                      <span className="block text-primary font-ui font-bold uppercase tracking-wider text-[12px] mb-1">
+                        {step.date}
+                      </span>
+                      <p className="text-[#2c2d2e] font-sans text-[15px] leading-snug">
+                        {step.event}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Related News */}
+            <div className="bg-[#f7f9f9] rounded-2xl p-8 border border-gray-100">
+              <h3 className="text-[24px] font-serif font-bold text-[#2c2d2e] mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
+                <Building2 className="text-primary" /> Related News
+              </h3>
             
             {relatedPosts.length > 0 ? (
               <div className="space-y-6">
