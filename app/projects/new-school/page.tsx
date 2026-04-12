@@ -66,12 +66,12 @@ export default function ButtonwoodPropertyProjectPage() {
             </p>
             
             <a 
-              href="https://www.toronto.ca/city-government/planning-development/construction-new-facilities/park-facility-projects/buttonwood-park-improvements"
+              href="https://www.tcdsb.org/o/corporateservices/page/new-school"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-primary text-white font-ui font-bold uppercase tracking-[1px] px-8 py-4 rounded-[4px] shadow-sm hover:bg-[#a3107c] hover:-translate-y-1 transition-all duration-300 mt-6"
             >
-              View City of Toronto Official Page
+              View Project Details
               <ExternalLink size={20} />
             </a>
           </div>

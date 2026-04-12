@@ -1,5 +1,5 @@
 ---
-title: "Picnic In The Park - September 7th"
+title: "Picnic in the Park — September 7, 2025"
 date: "2025-08-11 15:25:09"
 category: "Uncategorized"
 excerpt: " The Buttonwood Hill Residents Association (BHRA) invites you and your family to join us for our 2nd Annual Buttonwood Community Picnic! Sunday, Septe..."

@@ -4,10 +4,10 @@ import { ArrowRight, Star } from "lucide-react";
 
 export default function ProjectsPage() {
   const projects = [
-    { name: "New School", slug: "new-school", desc: "Latest info and hearings regarding the Buttonwood Hill local development initiatives.", image: "/images/projects/buttonwood.png" },
-    { name: "Lanterra Developments — 400 Eglinton Avenue West (Plant World)", slug: "plant-world", desc: "Updates on the Plant World site development and rezoning applications.", image: "/images/projects/plant-world.png" },
-    { name: "Humbertown Plaza", slug: "humbertown-plaza", desc: "Redevelopment plans and resident feedback regarding local commercial hubs.", image: "/images/projects/humbertown.jpg" },
-    { name: "Eglinton West LRT", slug: "eglinton-west-lrt", desc: "Transit expansion updates and community impact on our local infrastructure.", image: "/images/projects/eglinton-west.png" },
+    { name: "New School", slug: "new-school", desc: "Construction of the New Catholic Elementary School in Ward 2 (Former Buttonwood Hill Public School Site) is currently underway and will accommodate 600 students with 5-room childcare. The anticipated Opening Date is September 1, 2027 (construction completion — Winter 2026).", image: "/images/projects/buttonwood.png" },
+    { name: "Lanterra Developments — Notting Hill Condos, 4000 Eglinton Avenue West (Plant World)", slug: "plant-world", desc: "Plant World closed its doors at 4000 Eglinton Avenue West on September 30, 2019. Lanterra Developments are building \"Notting Hill Condos\" on this site featuring five residential towers in two Phases.", image: "/images/projects/notting-hill.jpg" },
+    { name: "Humbertown Plaza", slug: "humbertown-plaza", desc: "First Capital are currently revitalizing Humbertown Mall and some shops will remain open during this process. First Capital anticipates the unveiling of the new and improved Humbertown Mall in 2026.", image: "/images/projects/humbertown.jpg" },
+    { name: "Eglinton Crosstown LRT", slug: "eglinton-west-lrt", desc: "Transit expansion updates and community impact on our local infrastructure.", image: "/images/projects/eglinton-west.png" },
     { name: "Richview Square", slug: "richview-square", desc: "Upcoming commercial and residential changes in the Richview footprint.", image: "/images/projects/richview-square.jpg" },
     { name: "La Rose Apartments", slug: "la-rose-apartments", desc: "Details on ongoing proposals and high-rise density conversations.", image: "/images/projects/la-rose.jpg" }
   ];
@@ -38,10 +38,10 @@ export default function ProjectsPage() {
             </div>
             <div className="p-8 md:p-12 flex flex-col justify-center flex-grow">
               <h2 className="text-[32px] font-serif font-bold text-primary mb-4 group-hover:text-[#a3107c] transition-colors">
-                New School
+                Buttonwood Park Improvements Project (City of Toronto)
               </h2>
               <p className="text-foreground text-[16px] leading-relaxed mb-8 flex-grow">
-                The New School represents the core of our neighbourhood focus. Most recently, the City of Toronto is undertaking significant improvements to Buttonwood Park. The park design will be determined through extensive community engagement and is proposed to include upgraded accessible pathways, a shade structure, new seating, and lighting improvements.
+                The park design will be determined through community engagement and is proposed to include upgraded pathways, a shade structure, seating and lighting.
               </p>
               <div className="inline-flex items-center gap-2 bg-primary text-white font-ui font-bold uppercase tracking-[1px] text-[13px] px-6 py-3 rounded-[4px] self-start group-hover:bg-[#a3107c] transition-colors">
                 View Project Details <ArrowRight size={16} />

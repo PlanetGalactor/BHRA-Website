@@ -61,7 +61,7 @@ export default function Home() {
             <div className="w-full md:w-[40%] flex flex-col space-y-6 pt-0 md:pt-[76px]">
               <div className="border-l-4 border-[#9b287b] pl-6 py-2">
                 <p className="text-[#9b287b] font-ui font-bold text-[18px] uppercase tracking-wide">
-                  Est. in our community
+                  Est. 2003 in our community
                 </p>
               </div>
               <div className="border-l-4 border-[#9b287b] pl-6 py-2">
@@ -84,32 +84,32 @@ export default function Home() {
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Card 1 */}
-            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="w-16 h-16 bg-[#f7f9f9] text-[#9b287b] rounded-full flex items-center justify-center mb-6">
                 <Users size={32} />
               </div>
               <h3 className="text-[26px] font-serif font-bold text-[#9b287b] mb-4">Who We Are</h3>
-              <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] line-clamp-2">
+              <p className="text-[#666666] font-sans text-[16px] leading-[1.7em]">
                 A dedicated group of neighbours working together to build a vibrant community in Buttonwood Hill.
               </p>
             </div>
             {/* Card 2 */}
-            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="w-16 h-16 bg-[#f7f9f9] text-[#9b287b] rounded-full flex items-center justify-center mb-6">
                 <Shield size={32} />
               </div>
               <h3 className="text-[26px] font-serif font-bold text-[#9b287b] mb-4">What We Do</h3>
-              <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] line-clamp-2">
+              <p className="text-[#666666] font-sans text-[16px] leading-[1.7em]">
                 Advocate for local issues, host events, and keep our residents informed and deeply connected.
               </p>
             </div>
             {/* Card 3 */}
-            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="w-16 h-16 bg-[#f7f9f9] text-[#9b287b] rounded-full flex items-center justify-center mb-6 flex-shrink-0">
                 <ArrowRight size={32} />
               </div>
               <h3 className="text-[26px] font-serif font-bold text-[#9b287b] mb-4">Get Involved</h3>
-              <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] line-clamp-2">
+              <p className="text-[#666666] font-sans text-[16px] leading-[1.7em]">
                 Become a member, attend our meetings, and volunteer to make our neighbourhood even better.
               </p>
             </div>

@@ -4,10 +4,11 @@ import { User, Calendar, MapPin, Building, Activity, Users } from "lucide-react"
 
 export default function AboutPage() {
   const team = [
-    { name: "Christina", role: "Executive Member" },
-    { name: "Ela", role: "Executive Member" },
-    { name: "Shabnam", role: "Executive Member" },
-    { name: "Pauline", role: "Executive Member" },
+    { name: "Christina Manulak", role: "President" },
+    { name: "Ela Tkach", role: "Executive Member" },
+    { name: "Shabnam Ayough", role: "Executive Member" },
+    { name: "Pauline Saliba", role: "Executive Member" },
+    { name: "Nancy Roper", role: "Executive Member" },
   ];
 
   const timelineSteps = [
@@ -32,7 +33,7 @@ export default function AboutPage() {
     {
       year: "2017 & Beyond",
       title: "Continued Advocacy",
-      content: "We fought to support the sale of Buttonwood School to a board and supported Friends of Silver Creek. It was a win/win outcome for both schools! We continually organize informative, well-attended community meetings for the continued vibrancy of Buttonwood Hill.",
+      content: "We fought to support the sale of Buttonwood School to the TCDSB and supported Friends of Silver Creek. It was a win/win outcome for both schools! We organise informative, well-attended community meetings for the continued vibrancy of Buttonwood Hill.",
       icon: <MapPin className="w-5 h-5 text-white" />
     }
   ];
@@ -143,7 +144,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member, index) => (
               <div
                 key={index}
@@ -171,6 +172,8 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+            {/* Blank 6th card to complete 3x2 grid */}
+            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-white p-8 text-center shadow-lg border border-gray-100 opacity-30" />
           </div>
         </div>
       </section>
