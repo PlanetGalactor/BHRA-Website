@@ -37,7 +37,7 @@ export default function ProjectsPage() {
               </div>
             </div>
             <div className="p-8 md:p-12 flex flex-col justify-center flex-grow">
-              <h2 className="text-[32px] font-serif font-bold text-primary mb-4 group-hover:text-[#a3107c] transition-colors">
+              <h2 className="text-[24px] sm:text-[32px] font-serif font-bold text-primary mb-4 group-hover:text-[#a3107c] transition-colors">
                 Buttonwood Park Improvements Project (City of Toronto)
               </h2>
               <p className="text-foreground text-[16px] leading-relaxed mb-8 flex-grow">

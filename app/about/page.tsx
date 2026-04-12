@@ -4,9 +4,9 @@ import { User, Calendar, MapPin, Building, Activity, Users } from "lucide-react"
 
 export default function AboutPage() {
   const team = [
+    { name: "Shabnam Ayough", role: "Executive Member" },
     { name: "Christina Manulak", role: "President" },
     { name: "Ela Tkach", role: "Executive Member" },
-    { name: "Shabnam Ayough", role: "Executive Member" },
     { name: "Pauline Saliba", role: "Executive Member" },
   ];
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
     {
       year: "2017 & Beyond",
       title: "Continued Advocacy",
-      content: "We fought to support the sale of Buttonwood School to the TCDSB and supported Friends of Silver Creek. It was a win/win outcome for both schools! We organise informative, well-attended community meetings for the continued vibrancy of Buttonwood Hill.",
+      content: "We fought to support the sale of Buttonwood School to the TCDSB and supported Friends of Silver Creek. It was a win/win outcome for both schools! We organize informative, well-attended community meetings for the continued vibrancy of Buttonwood Hill.",
       icon: <MapPin className="w-5 h-5 text-white" />
     }
   ];
@@ -79,22 +79,22 @@ export default function AboutPage() {
             {/* Vertical Line */}
             <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-primary/20 md:-translate-x-1/2 rounded-full"></div>
 
-            <div className="space-y-6 md:space-y-10">
+            <div className="space-y-4 md:space-y-6">
               {timelineSteps.map((step, index) => {
                 const isEven = index % 2 === 0;
                 return (
                   <div key={index} className={`relative flex items-center md:justify-between flex-col md:flex-row group ${isEven ? 'md:flex-row-reverse' : ''}`}>
                     {/* Center Icon */}
-                    <div className="absolute left-[28px] md:left-1/2 w-12 h-12 bg-primary rounded-full flex items-center justify-center md:-translate-x-1/2 border-4 border-white shadow-md z-10 group-hover:scale-110 group-hover:bg-[#a3107c] transition-all duration-300 -translate-x-[24px]">
+                    <div className="absolute left-[28px] md:left-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center md:-translate-x-1/2 border-4 border-white shadow-md z-10 group-hover:scale-110 group-hover:bg-[#a3107c] transition-all duration-300 -translate-x-[20px]">
                       {step.icon}
                     </div>
                     
                     {/* Content Card */}
-                    <div className={`w-full md:w-[45%] pl-16 md:pl-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
-                      <div className="bg-[#f7f9f9] p-5 rounded-2xl shadow-sm border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <span className="text-primary font-ui font-bold uppercase tracking-widest text-[13px] mb-1 block">{step.year}</span>
-                        <h3 className="text-[20px] font-serif font-bold text-[#2c2d2e] mb-2">{step.title}</h3>
-                        <p className="text-[#666666] font-sans text-[15px] leading-[1.7em]">
+                    <div className={`w-full md:w-[45%] pl-14 md:pl-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
+                      <div className="bg-[#f7f9f9] p-4 rounded-2xl shadow-sm border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <span className="text-primary font-ui font-bold uppercase tracking-widest text-[12px] mb-0.5 block">{step.year}</span>
+                        <h3 className="text-[18px] font-serif font-bold text-[#2c2d2e] mb-1">{step.title}</h3>
+                        <p className="text-[#666666] font-sans text-[14px] leading-[1.6em]">
                           {step.content}
                         </p>
                       </div>

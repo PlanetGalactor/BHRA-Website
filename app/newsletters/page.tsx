@@ -52,7 +52,7 @@ export default function NewslettersPage() {
                   </p>
                   
                   {/* Action Buttons */}
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <a 
                       href={newsletter.pdfFile} 
                       target="_blank" 

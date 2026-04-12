@@ -11,7 +11,7 @@ export default function GetInvolvedPage() {
             <h1 className="text-[48px] max-md:text-[36px] font-serif font-bold text-primary mb-6">
               Join Our Community
             </h1>
-            <p className="text-[#666666] font-sans text-[18px] leading-[1.8em] mb-10">
+            <p className="text-[#666666] font-sans text-[18px] leading-[1.8em] mb-10 px-4 sm:px-0">
               Buttonwood Hill Residents Association (BHRA) brings the community together to advocate and stay informed about local events and issues impacting our residents, in order to maintain safe and thriving neighbourhoods. Regular meetings are hosted to discuss and stay updated on important community topics. Social events and gatherings with food, live music and other entertainment, are also frequently organized to bring the community together.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">

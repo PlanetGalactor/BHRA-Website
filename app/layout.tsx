@@ -40,7 +40,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
+      <body className="min-h-full flex flex-col font-sans bg-background text-foreground overflow-x-hidden">
         <Navbar />
         <main className="flex-1 flex flex-col">
           {children}

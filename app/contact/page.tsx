@@ -3,7 +3,7 @@ export default function ContactPage() {
     <div className="py-20 bg-border/30">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div className="px-4 sm:px-0">
             <h1 className="text-5xl font-serif font-bold text-primary mb-6">Contact Us</h1>
             <p className="text-xl text-foreground font-ui mb-8">
               Have a question or want to get involved with the Buttonwood Hill Residents Association? Reach out using the form.

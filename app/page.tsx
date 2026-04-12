@@ -21,7 +21,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)] z-10"></div>
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center flex flex-col items-center py-20">
-          <h1 className="text-5xl md:text-6xl lg:text-[64px] font-bold font-serif text-white mb-6 leading-[1.1] drop-shadow-md">
+          <h1 className="text-[38px] sm:text-5xl md:text-6xl lg:text-[64px] font-bold font-serif text-white mb-6 leading-[1.1] drop-shadow-md">
             Fostering Our Community Together
           </h1>
           <p className="text-lg md:text-[18px] text-white font-sans font-normal mb-10 max-w-3xl mx-auto leading-[1.7em] drop-shadow">
