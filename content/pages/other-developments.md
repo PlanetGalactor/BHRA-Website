@@ -15,6 +15,6 @@ excerpt: " Other Developments Within Etobicoke &nbsp;Overview Not every change i
 <p data-start="157" data-end="415" class="">Not every change in our community requires its own page, but many are still worth your attention. This section highlights smaller-scale projects, recent updates, and noteworthy developments happening in and around Etobicoke that may impact our neighbourhood.</p>
 <p data-start="417" data-end="744" class="">From local roadwork and park upgrades to minor zoning applications and community-led initiatives, this page serves as a central space to stay informed about what’s happening beyond the major projects. We’ll continue to add timely updates, event notices, and brief summaries here as new information becomes available.</p><h3>Our Mission</h3>
 <p><span>Buttonwood Hill Residents Association (BHRA) brings the community together to advocate and stay informed about local events and issues impacting our residents, in order to maintain safe and thriving neighbourhoods.</span></p><h2>News &amp; Events</h2>
-<p>Stay up to date with this development</p><h2>Get in Touch. Get Involved.</h2>
-<p><span>Have any questions or concerns regarding our community?</span></p>facebook
+<p>Stay up to date with this development</p>[View All News & Events](https://buttonwoodhillresidents.com/news-events/)<h2>Get in Touch. Get Involved.</h2>
+<p><span>Have any questions or concerns regarding our community?</span></p>[JOIN Membership Form](https://buttonwoodhillresidents.com/get-involved/)facebook
 <!-- /wp:divi/placeholder -->

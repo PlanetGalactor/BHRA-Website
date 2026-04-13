@@ -49,13 +49,17 @@ def parse_xml():
         if not content:
             content = ''
             
-        # Strip shortcodes: [shortcode attr="val"]...[/shortcode] or self-closing
-        # Simplistic regex to remove block-level shortcodes that might be from Divi
-        content = re.sub(r'\[/?et_pb_[^\]]+\]', '', content)
-        # Strip all other [...] that match typical divi/wp shortcodes but leave standard markdown alone...
-        # Actually it's safer to just strip [et_pb_* ] completely. Divi uses [et_pb_section ...]
+        # 1. Extract high-value content from Divi attributes before stripping tags
+        # Extract images
+        content = re.sub(r'\[et_pb_image src=["\']([^"\']+)["\'][^\]]*\]', r'<img src="\1" />', content)
         
-        # Basic cleanup: remove leftover shortcodes
+        # Extract headers
+        content = re.sub(r'\[et_pb_fullwidth_header title=["\']([^"\']+)["\'][^\]]*\]', r'<h2>\1</h2>', content)
+        
+        # Extract buttons
+        content = re.sub(r'\[et_pb_button button_url=["\']([^"\']+)["\'] button_text=["\']([^"\']+)["\'][^\]]*\]', r'[\2](\1)', content)
+        
+        # 2. Strip remaining structural shortcodes
         content = re.sub(r'\[/?(et_pb_[^\]]+|divi_[^\]]+)\]', '', content)
         
         # date

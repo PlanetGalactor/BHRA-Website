@@ -4,7 +4,7 @@ import { ArrowRight, Star } from "lucide-react";
 
 export default function ProjectsPage() {
   const projects = [
-    { name: "New School (Former Buttonwood Hill School)", slug: "new-school", desc: "Construction of the New Catholic Elementary School in Ward 2 (Former Buttonwood Hill Public School Site). Capacity for 600 students with a 5-room childcare centre. Anticipated Opening: Sept 2027.", image: "/images/projects/buttonwood.png" },
+    { name: "New School (Former Buttonwood Hill School)", slug: "new-school", desc: "Construction of the New Catholic Elementary School in Ward 2 (Former Buttonwood Hill Public School Site). Capacity for 600 students with a 5-room childcare centre. Anticipated Opening: Sept 2027.", image: "/images/projects/buttonwood-hill.jpg" },
     { name: "Lanterra Developments \u2014 Notting Hill Condos, 4000 Eglinton Avenue West (Plant World)", slug: "plant-world", desc: "Plant World closed its doors at 4000 Eglinton Avenue West on September 30, 2019. Lanterra Developments are building \"Notting Hill Condos\" on this site featuring five residential towers in two Phases.", image: "/images/projects/notting-hill.jpg" },
     { name: "Humbertown Plaza & Redevelopment", slug: "humbertown-plaza", desc: "First Capital are currently revitalizing Humbertown Mall and some shops will remain open during this process. First Capital anticipates the unveiling of the new and improved Humbertown Mall in 2026.", image: "/images/projects/humbertown.jpg" },
     { name: "Eglinton Crosstown LRT", slug: "eglinton-west-lrt", desc: "Transit expansion updates and community impact on our local infrastructure.", image: "/images/projects/eglinton-west.png" },
