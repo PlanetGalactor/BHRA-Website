@@ -263,6 +263,7 @@ export default async function DynamicProjectPage({ params }: { params: Promise<{
           </div>
           
         </div>
+        </div>
       </section>
     </div>
   );
