@@ -216,7 +216,7 @@ export default async function DynamicProjectPage({ params }: { params: Promise<{
                 <div className="space-y-6">
                   {project.timeline.map((step, idx) => (
                     <div key={idx} className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-primary before:rounded-full">
-                      {idx !== project.timeline.length - 1 && (
+                      {idx !== project.timeline!.length - 1 && (
                         <div className="absolute left-[3px] top-4 w-[2px] h-[calc(100%+8px)] bg-primary/20"></div>
                       )}
                       <span className="block text-primary font-ui font-bold uppercase tracking-wider text-[12px] mb-1">
