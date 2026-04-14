@@ -12,6 +12,11 @@ export interface Post {
   category: string;
   excerpt: string;
   content: string;
+  image?: string;
+  image_url_fallback?: string;
+  pdf_url?: string;
+  external_link?: string;
+  has_image?: boolean;
 }
 
 export function getSortedPostsData(): Post[] {
@@ -31,6 +36,11 @@ export function getSortedPostsData(): Post[] {
       category: matterResult.data.category,
       excerpt: matterResult.data.excerpt,
       content: matterResult.content,
+      image: matterResult.data.image,
+      image_url_fallback: matterResult.data.image_url_fallback,
+      pdf_url: matterResult.data.pdf_url,
+      external_link: matterResult.data.external_link,
+      has_image: matterResult.data.has_image,
     };
   });
 
@@ -56,6 +66,11 @@ export function getPostBySlug(slug: string): Post | null {
     category: matterResult.data.category,
     excerpt: matterResult.data.excerpt,
     content: matterResult.content,
+    image: matterResult.data.image,
+    image_url_fallback: matterResult.data.image_url_fallback,
+    pdf_url: matterResult.data.pdf_url,
+    external_link: matterResult.data.external_link,
+    has_image: matterResult.data.has_image,
   };
 }
 

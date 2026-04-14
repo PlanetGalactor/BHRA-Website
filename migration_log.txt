@@ -1,0 +1,73 @@
+Processed: six-points-plaza-update | Images: 1 | PDF: No
+Processed: eglinton-crosstown-west-extension-update | Images: 1 | PDF: No
+Processed: eglinton-crosstown-west-extension-update-feb | Images: 2 | PDF: No
+Processed: buttonwood-hill-residents-association-spring-2021-newsletter | Images: 1 | PDF: No
+Processed: eglinton-crosstown-west-extension-meeting-june-8 | Images: 1 | PDF: No
+Processed: cybersecurity-webinar | Images: 1 | PDF: No
+Processed: 788 | Images: 1 | PDF: No
+Processed: 796 | Images: 1 | PDF: No
+Processed: drive-by-paper-shredding-day | Images: 1 | PDF: No
+Processed: eglinton-crosstown-meeting-sept-28-2021 | Images: 2 | PDF: No
+Processed: november-2021-eglinton-west-lrt-update | Images: 2 | PDF: No
+Processed: 838 | Images: 0 | PDF: No
+Processed: 844 | Images: 4 | PDF: Yes
+Processed: ecwe-project-update | Images: 1 | PDF: Yes
+Processed: eglinton-crosstown-west-extension | Images: 1 | PDF: No
+Processed: young-urban-forest-leaders | Images: 1 | PDF: No
+Processed: ecwe-drilling-and-water-sampling | Images: 2 | PDF: No
+Processed: ecwe-survey | Images: 0 | PDF: No
+Processed: 914 | Images: 1 | PDF: No
+Processed: 22-division-toronto-police-service-open-house-bbq | Images: 1 | PDF: No
+Processed: our-plan-toronto-invitation-to-participate | Images: 0 | PDF: No
+Processed: eglinton-west-lrt-update | Images: 2 | PDF: No
+Processed: 944 | Images: 1 | PDF: No
+Processed: 950 | Images: 5 | PDF: No
+Processed: 961 | Images: 1 | PDF: No
+Processed: 969 | Images: 1 | PDF: No
+Processed: 974 | Images: 0 | PDF: No
+Processed: federal-electoral-districts-redistribution-2022 | Images: 0 | PDF: No
+Processed: 986 | Images: 2 | PDF: No
+Processed: drive-by-paper-shredding-day-2 | Images: 1 | PDF: No
+Processed: 998 | Images: 1 | PDF: No
+Processed: 1015 | Images: 1 | PDF: No
+Processed: 1021 | Images: 0 | PDF: No
+Processed: meet-your-etobicoke-centre-candidates-ward-2-virtual-event | Images: 0 | PDF: No
+Processed: bhra-february-2023-newsletter | Images: 3 | PDF: No
+Processed: eglinton-crosstown-west-extension-open-house-may-15-2023 | Images: 1 | PDF: No
+Processed: 1049 | Images: 1 | PDF: No
+Processed: 1055 | Images: 1 | PDF: No
+Processed: 1061 | Images: 1 | PDF: No
+Processed: winter-coat-drive | Images: 1 | PDF: No
+Processed: 1089 | Images: 1 | PDF: No
+Processed: 1095 | Images: 1 | PDF: No
+Processed: 22-division-cplc-community-safety-information-town-hall | Images: 1 | PDF: No
+Processed: 1108 | Images: 2 | PDF: No
+Processed: 1121 | Images: 2 | PDF: No
+Processed: 1132 | Images: 2 | PDF: No
+Processed: 1140 | Images: 0 | PDF: No
+Processed: 1168 | Images: 1 | PDF: No
+Processed: 1174 | Images: 1 | PDF: No
+Processed: 1185 | Images: 1 | PDF: No
+Processed: save-buttonwood-park-update-july-14-2024 | Images: 1 | PDF: No
+Processed: 1210 | Images: 1 | PDF: No
+Processed: toronto-police-fundraising-gala | Images: 1 | PDF: No
+Processed: picnic-in-the-park-september-2nd-2024 | Images: 1 | PDF: No
+Processed: outstanding-volunteer-community-service-award | Images: 1 | PDF: No
+Processed: bhra-buttonwood-park-march-2025 | Images: 1 | PDF: No
+Processed: bhra-letter-to-the-executive-committee-june-18-2024 | Images: 1 | PDF: No
+Processed: letter-from-tcdsb-community-meeting-february-28th | Images: 1 | PDF: No
+Processed: letter-to-councillor-holyday-toronto-city-council-dec-17-2024 | Images: 1 | PDF: No
+Processed: buttonwood-hill-property-update-sept-29th-2024 | Images: 1 | PDF: No
+Processed: avenue-policy-review-open-house-jan-13-2025 | Images: 1 | PDF: No
+Processed: avenues-proposal-communication-from-councillor-holyday-january-20-2025 | Images: 1 | PDF: No
+Processed: summer-social-save-the-date-september-7th-2025 | Images: 1 | PDF: No
+Processed: picnic-in-the-park-september-7th | Images: 1 | PDF: No
+Processed: bhra-photos-picnic-in-the-park-2025 | Images: 1 | PDF: No
+Processed: buttonwood-park-survey | Images: 1 | PDF: No
+
+--- SUMMARY ---
+Total Posts: 66
+Images Downloaded: 76
+Images Failed: 0
+Posts with no image: 8
+Posts with PDF: 2

@@ -1,11 +1,10 @@
 ---
-title: "Toronto Police Fundraising Gala"
+title: "CPLC Fundraising Gala - September 14th 2024"
 date: "2024-08-28 03:29:33"
 category: "Other Developments"
-excerpt: " CPLC Fundraising Gala - September 14th 2024[All News & Events](@ET-DC@eyJkeW5hbWljIjp0cnVlLCJjb250ZW50IjoicG9zdF9saW5rX3VybF9wYWdlIiwic2V0dGluZ3MiOns..."
+image: "/images/posts/CPLC-Fundraising-Gala-Poster.jpg"
+image_url_fallback: ""
+pdf_url: ""
+external_link: ""
+has_image: true
 ---
-
-<!-- wp:divi/placeholder -->
-<h2>CPLC Fundraising Gala - September 14th 2024</h2><img src="https://buttonwoodhillresidents.com/wp-content/uploads/2024/08/CPLC-Fundraising-Gala-Poster.jpg" />[All News & Events](@ET-DC@eyJkeW5hbWljIjp0cnVlLCJjb250ZW50IjoicG9zdF9saW5rX3VybF9wYWdlIiwic2V0dGluZ3MiOnsicG9zdF9pZCI6IjkzIn19@)<h2>Get in Touch. Get Involved.</h2>
-<span>Have any questions or concerns regarding our community?</span>facebook
-<!-- /wp:divi/placeholder -->
