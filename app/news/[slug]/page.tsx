@@ -2,6 +2,7 @@ import { getPostBySlug, getSortedPostsData } from "@/lib/markdown";
 import { format } from "date-fns";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import PostLightbox from "./PostLightbox";
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData();
@@ -51,16 +52,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           </time>
         </div>
 
-        {/* 5. Featured image */}
+        {/* 5. Featured image with Lightbox */}
         {hasFeaturedImage && imageSrc && (
-          <div className="mb-16">
-            <img 
-              src={imageSrc} 
-              alt={post.title} 
-              className="w-full h-auto shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100"
-            />
-          </div>
+          <PostLightbox imageSrc={imageSrc} title={post.title} />
         )}
+
 
         {/* 6. Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 mb-20">

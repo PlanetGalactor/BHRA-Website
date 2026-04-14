@@ -47,6 +47,22 @@ def download_image(url):
         print(f"Error downloading {url}: {e}")
         return None
 
+def get_category_by_title(title):
+    t = title.lower()
+    if any(keyword in t for keyword in ['buttonwood', 'bhra', 'picnic', 'park', 'school', 'tcdsb', 'silver creek']):
+        return "Buttonwood Hill Property"
+    if any(keyword in t for keyword in ['eglinton', 'lrt', 'crosstown', 'ecwe']):
+        return "Eglinton West LRT"
+    if 'humbertown' in t:
+        return "Humbertown Plaza"
+    if 'richview' in t:
+        return "Richview Square"
+    if 'la rose' in t:
+        return "La Rose Apartments"
+    if 'six points' in t:
+        return "Other Developments"
+    return "Community News"
+
 def migrate():
     if not os.path.exists(POSTS_DIR):
         os.makedirs(POSTS_DIR)
@@ -80,14 +96,19 @@ def migrate():
         
         if post_type != 'post' or status != 'publish':
             continue
+
+        slug_elem = item.find('wp:post_name', NS)
+        slug = slug_elem.text if slug_elem is not None else f"post-{summary['total_posts'] + 1}"
+
+        # Skip specifically excluded posts
+        if slug in ['buttonwood-park-survey', 'bhra-photos-picnic-in-the-park-2025']:
+            continue
             
         summary['total_posts'] += 1
         
         title_elem = item.find('title')
         title = title_elem.text if title_elem is not None and title_elem.text else "Untitled"
-        
-        slug_elem = item.find('wp:post_name', NS)
-        slug = slug_elem.text if slug_elem is not None else f"post-{summary['total_posts']}"
+
         
         date_elem = item.find('wp:post_date', NS)
         date = date_elem.text if date_elem is not None else "2000-01-01 00:00:00"
@@ -95,22 +116,18 @@ def migrate():
         content_elem = item.find('content:encoded', NS)
         content = content_elem.text if content_elem is not None and content_elem.text else ""
         
-        # Extract category
-        categories = []
-        for cat in item.findall('category'):
-            if cat.attrib.get('domain') == 'category':
-                categories.append(cat.text)
-        category = categories[0] if categories else "News"
-        
         # Extract divi_title
         divi_title_match = re.search(r'\[et_pb_fullwidth_header title="([^"]+)"', content)
         divi_title = divi_title_match.group(1) if divi_title_match else None
-
         
         # Determine final title
         final_title = title
         if divi_title and divi_title != title and len(divi_title) > 3:
             final_title = divi_title
+            
+        # Set category based on title
+        category = get_category_by_title(final_title)
+
             
         # Extract Images
         image_urls = re.findall(r'src="(https://buttonwoodhillresidents.com/wp-content/uploads/[^"]+\.(?:jpg|jpeg|png|gif|webp))"', content)

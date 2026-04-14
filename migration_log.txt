@@ -62,12 +62,10 @@ Processed: avenue-policy-review-open-house-jan-13-2025 | Images: 1 | PDF: No
 Processed: avenues-proposal-communication-from-councillor-holyday-january-20-2025 | Images: 1 | PDF: No
 Processed: summer-social-save-the-date-september-7th-2025 | Images: 1 | PDF: No
 Processed: picnic-in-the-park-september-7th | Images: 1 | PDF: No
-Processed: bhra-photos-picnic-in-the-park-2025 | Images: 1 | PDF: No
-Processed: buttonwood-park-survey | Images: 1 | PDF: No
 
 --- SUMMARY ---
-Total Posts: 66
-Images Downloaded: 76
+Total Posts: 64
+Images Downloaded: 74
 Images Failed: 0
 Posts with no image: 8
 Posts with PDF: 2

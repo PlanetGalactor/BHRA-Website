@@ -235,7 +235,11 @@ export default function NewsPage() {
           {!loading && paginatedPosts.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 mb-16">
               {paginatedPosts.map((post) => (
-                <div key={post.slug} className="bg-white rounded-[8px] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group border border-transparent hover:border-gray-100">
+                <Link 
+                  key={post.slug} 
+                  href={`/news/${post.slug}`}
+                  className="bg-white rounded-[8px] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group border border-transparent hover:border-gray-100 cursor-pointer"
+                >
                   <div className="h-[200px] bg-primary relative flex items-center justify-center p-6 overflow-hidden">
                     <div className="absolute inset-0 bg-primary mix-blend-multiply opacity-20 group-hover:opacity-10 transition-opacity duration-300 z-10"></div>
                     <div className="relative w-full h-full opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 z-0 flex items-center justify-center">
@@ -254,27 +258,23 @@ export default function NewsPage() {
                     <span className="text-[14px] text-[#666666] font-sans mb-3 block">
                       {format(new Date(post.date), 'MMM d, yyyy')}
                     </span>
-                    <h3 className="text-[26px] font-serif font-bold text-primary mb-4 leading-[1.2] group-hover:text-accent transition-colors duration-300 line-clamp-2">
-                      <Link href={`/news/${post.slug}`}>
-                        {post.title}
-                      </Link>
+                    <h3 className="text-sm sm:text-base font-serif font-bold text-primary mb-4 leading-[1.4] group-hover:text-accent transition-colors duration-300 line-clamp-3">
+                      {post.title}
                     </h3>
-                    <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] mb-6 line-clamp-2 flex-grow">
+                    <p className="text-[#666666] font-sans text-[15px] leading-[1.6em] mb-6 line-clamp-2 flex-grow">
                       {post.excerpt}
                     </p>
                     <div className="mt-auto">
-                      <Link
-                        href={`/news/${post.slug}`}
-                        className="text-primary font-ui font-bold text-[14px] uppercase tracking-[1px] hover:text-accent transition-colors duration-300 flex items-center"
-                      >
+                      <span className="text-primary font-ui font-bold text-[13px] uppercase tracking-[1px] group-hover:text-accent transition-colors duration-300 flex items-center">
                         Read more <span className="ml-2">→</span>
-                      </Link>
+                      </span>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           )}
+
 
           {!loading && paginatedPosts.length === 0 && (
             <div className="py-20 text-center bg-white rounded-[8px] shadow-sm border border-gray-100">
