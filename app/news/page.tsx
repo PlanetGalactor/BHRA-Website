@@ -240,27 +240,29 @@ export default function NewsPage() {
                   href={`/news/${post.slug}`}
                   className="bg-white rounded-[8px] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group border border-transparent hover:border-gray-100 cursor-pointer"
                 >
-                  <div className="h-[200px] bg-primary relative flex items-center justify-center p-6 overflow-hidden">
-                    <div className="absolute inset-0 bg-primary mix-blend-multiply opacity-20 group-hover:opacity-10 transition-opacity duration-300 z-10"></div>
-                    <div className="relative w-full h-full opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 z-0 flex items-center justify-center">
-                      <img 
-                        src="https://buttonwoodhillresidents.com/wp-content/uploads/2019/10/whitetransparent-300x131.png"
-                        alt="BHRA Logo"
-                        className="object-contain w-3/4 max-h-full"
-                      />
-                    </div>
+                  <div className="relative w-full h-48 overflow-hidden">
+                    <img
+                      src={post.has_image && post.image ? post.image : "/images/hero-park.jpg"}
+                      alt={post.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#9b287b]/80 to-transparent" />
                     {/* Category Badge */}
-                    <div className="absolute top-4 left-4 z-20 bg-primary text-white text-[12px] font-bold font-sans uppercase tracking-[1px] px-3 py-1 rounded-[4px] shadow-sm">
+                    <div className="absolute top-4 left-4 z-10 bg-primary text-white text-[12px] font-bold font-sans uppercase tracking-[1px] px-3 py-1 rounded-[4px] shadow-sm">
                       {post.category || 'News'}
+                    </div>
+                    {/* Title over gradient */}
+                    <div className="absolute bottom-0 left-0 right-0 z-10 px-4 pb-3">
+                      <p className="text-white font-serif text-base font-semibold line-clamp-2 leading-snug">
+                        {post.title}
+                      </p>
                     </div>
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
                     <span className="text-[14px] text-[#666666] font-sans mb-3 block">
                       {format(new Date(post.date), 'MMM d, yyyy')}
                     </span>
-                    <h3 className="text-sm sm:text-base font-serif font-bold text-primary mb-4 leading-[1.4] group-hover:text-accent transition-colors duration-300 line-clamp-3">
-                      {post.title}
-                    </h3>
                     <p className="text-[#666666] font-sans text-[15px] leading-[1.6em] mb-6 line-clamp-2 flex-grow">
                       {post.excerpt}
                     </p>
