@@ -8,7 +8,7 @@ export default function LawnSignsPage() {
             Show your support for our community initiatives. Request a lawn sign and one of our volunteers will drop it off at your property.
           </p>
           
-          <form action="https://formspree.io/f/placeholder-replace-me" method="POST" className="space-y-6 max-w-md mx-auto text-left">
+          <form action="https://formspree.io/f/mnjlnryk" method="POST" className="space-y-6 max-w-md mx-auto text-left">
             <input type="hidden" name="_subject" value="New Lawn Sign Request" />
             <div>
               <label htmlFor="name" className="block text-sm font-bold text-gray-700 font-ui uppercase tracking-wider mb-2">Name</label>

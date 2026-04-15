@@ -38,7 +38,7 @@ export default function GetInvolvedPage() {
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-[640px] mx-auto bg-white p-8 md:p-12 rounded-[8px] shadow-lg border border-[#f7f9f9]">
             
-            <form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST" className="space-y-6">
+            <form action="https://formspree.io/f/mnjlnryk" method="POST" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="firstName" className="block text-[#2c2d2e] font-ui font-bold uppercase tracking-[1px] text-[12px] mb-2">

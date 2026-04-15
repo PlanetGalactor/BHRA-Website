@@ -261,8 +261,7 @@ export default function Home() {
                   <p className="text-[#666666]">Fill out the form below and we'll get back to you as soon as possible.</p>
                 </div>
 
-                <form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST" className="space-y-8">
-                  <div dangerouslySetInnerHTML={{ __html: "<!-- Replace REPLACE_WITH_FORMSPREE_ID with your actual Formspree form ID -->" }}></div>
+                <form action="https://formspree.io/f/mnjlnryk" method="POST" className="space-y-8">
                   
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2.5">
