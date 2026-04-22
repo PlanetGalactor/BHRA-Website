@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col items-start text-left">
             <Link href="/" className="inline-block mb-6 hover:opacity-90 transition-opacity">
               <img
-                src="https://buttonwoodhillresidents.com/wp-content/uploads/2019/10/whitetransparent-300x131.png"
+                src="/images/bhra-logo-white.png"
                 alt="Buttonwood Hill Residents Association Logo"
                 className="h-[60px] w-auto"
               />
@@ -21,7 +21,6 @@ export default function Footer() {
             <Link
               href="/get-involved"
               className="bg-[#2ea3f2] text-white font-ui font-bold uppercase tracking-[1px] text-[14px] px-[24px] py-[10px] rounded-[4px] border-none hover:opacity-90 transition-all duration-300"
-              style={{ color: '#ffffff' }}
             >
               Get Involved
             </Link>
@@ -32,32 +31,32 @@ export default function Footer() {
             <h3 className="font-ui font-bold uppercase tracking-[2px] text-[16px] text-white mb-6">Key Resources</h3>
             <ul className="space-y-4 font-sans text-[16px]">
               <li>
-                <Link href="/about" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                <Link href="/about" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                <Link href="/news" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block">
                   News & Media
                 </Link>
               </li>
               <li>
-                <Link href="/newsletters" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                <Link href="/newsletters" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block">
                   Newsletters
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                <Link href="/projects" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block">
                   Projects & Developments
                 </Link>
               </li>
               <li>
-                <Link href="/quick-links" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                <Link href="/quick-links" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block">
                   Key Resources
                 </Link>
               </li>
               <li>
-                <Link href="/get-involved" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block" style={{ color: '#ffffff' }}>
+                <Link href="/get-involved" className="text-white hover:opacity-70 transition-opacity duration-300 inline-block">
                   Join The Association
                 </Link>
               </li>
@@ -70,7 +69,7 @@ export default function Footer() {
             <div className="space-y-4 font-sans text-[16px] mb-8">
               <div className="flex items-start">
                 <span className="font-bold w-16 opacity-90 inline-block">Email:</span>
-                <a href="mailto:Buttonwoodhillresidents@gmail.com" className="text-white hover:opacity-70 transition-opacity duration-300 break-all inline-block hover:underline" style={{ color: '#ffffff' }}>
+                <a href="mailto:Buttonwoodhillresidents@gmail.com" className="text-white hover:opacity-70 transition-opacity duration-300 break-all inline-block hover:underline">
                   Buttonwoodhillresidents@gmail.com
                 </a>
               </div>
@@ -84,7 +83,6 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-white hover:opacity-70 transition-opacity duration-300 inline-block"
                 aria-label="Facebook"
-                style={{ color: '#ffffff' }}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -96,7 +94,6 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-white hover:opacity-70 transition-opacity duration-300 inline-block"
                 aria-label="Instagram"
-                style={{ color: '#ffffff' }}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -110,7 +107,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-6 border-t border-white/20 text-center">
-          <p className="text-white opacity-70 font-sans text-[14px]" style={{ color: '#ffffff' }}>
+          <p className="text-white opacity-70 font-sans text-[14px]">
             &copy; {new Date().getFullYear()} Buttonwood Hill Residents Association. All rights reserved.
           </p>
         </div>

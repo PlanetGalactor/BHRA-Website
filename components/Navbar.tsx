@@ -25,7 +25,7 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center transition-transform hover:scale-105 duration-300">
               <img
-                src="https://demo.buttonwoodhillresidents.com/wp-content/uploads/2019/05/BlackButtonwoodHill.png"
+                src="/images/bhra-logo-black.png"
                 alt="BHRA Logo"
                 className="h-[77px] w-auto"
               />
@@ -58,7 +58,6 @@ export default function Navbar() {
             <Link
               href="/contact"
               className="bg-primary text-white font-ui font-bold uppercase tracking-[2px] text-[14px] px-[24px] py-[10px] rounded-[4px] border-2 border-primary hover:bg-[#a3107c] hover:border-[#a3107c] hover:scale-[1.02] transition-colors duration-300 shadow-sm shrink-0"
-              style={{ color: '#ffffff' }}
             >
               Contact Us
             </Link>
@@ -100,7 +99,6 @@ export default function Navbar() {
                 href="/contact"
                 onClick={() => setIsOpen(false)}
                 className="bg-primary text-white font-ui font-bold uppercase tracking-[2px] block text-center px-[24px] py-[12px] rounded-[4px] border-2 border-primary hover:bg-[#a3107c] transition-colors shadow-sm"
-                style={{ color: '#ffffff' }}
               >
                 Contact Us
               </Link>
