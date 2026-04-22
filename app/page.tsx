@@ -145,34 +145,44 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-10">
             {latestPosts.map((post) => (
-              <div key={post.slug} className="bg-[#f7f9f9] rounded-[8px] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group border border-transparent hover:border-gray-200">
-                <div className="h-[200px] bg-[#9b287b] relative flex items-center justify-center p-6 overflow-hidden">
-                  <div className="absolute inset-0 bg-[#9b287b] mix-blend-multiply opacity-20 group-hover:opacity-10 transition-opacity duration-300 z-10"></div>
-                  <div className="relative w-full h-full opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 z-0 flex items-center justify-center">
-                    <img 
-                      src="https://buttonwoodhillresidents.com/wp-content/uploads/2019/10/whitetransparent-300x131.png"
-                      alt="BHRA Logo"
-                      className="object-contain w-3/4 max-h-full"
-                    />
-                  </div>
-                  <div className="absolute top-4 right-4 z-20 bg-[#9b287b] text-white text-[12px] font-bold font-sans uppercase tracking-[1px] px-3 py-1 rounded-[4px] shadow-sm">
+              <Link 
+                key={post.slug} 
+                href={`/news/${post.slug}`}
+                className="bg-[#f7f9f9] rounded-[8px] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group border border-transparent hover:border-gray-200 cursor-pointer"
+              >
+                <div className="relative w-full h-48 overflow-hidden">
+                  <img
+                    src={post.has_image && post.image ? post.image : "/images/hero-park.jpg"}
+                    alt={post.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#9b287b]/80 to-transparent" />
+                  {/* Category Badge */}
+                  <div className="absolute top-4 left-4 z-10 bg-[#9b287b] text-white text-[12px] font-bold font-sans uppercase tracking-[1px] px-3 py-1 rounded-[4px] shadow-sm">
                     {post.category || 'News'}
+                  </div>
+                  {/* Title over gradient */}
+                  <div className="absolute bottom-0 left-0 right-0 z-10 px-4 pb-3">
+                    <p className="text-white font-serif text-base font-semibold line-clamp-2 leading-snug">
+                      {post.title}
+                    </p>
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-grow">
                   <span className="text-[14px] text-[#666666] font-sans mb-3 block">
                     {format(new Date(post.date), 'MMM d, yyyy')}
                   </span>
-                  <h3 className="text-[26px] font-serif font-bold mb-4 leading-[1.2] line-clamp-2">
-                    <Link href={`/news/${post.slug}`} className="text-[#2c2d2e] hover:text-[#9b287b] transition-colors duration-300">
-                      {post.title}
-                    </Link>
-                  </h3>
                   <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] mb-6 line-clamp-2 flex-grow">
                     {post.excerpt}
                   </p>
+                  <div className="mt-auto">
+                    <span className="text-[#9b287b] font-ui font-bold text-[13px] uppercase tracking-[1px] group-hover:text-[#a3107c] transition-colors duration-300 flex items-center">
+                      Read more <span className="ml-2">→</span>
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
