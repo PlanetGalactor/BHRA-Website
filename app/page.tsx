@@ -12,12 +12,12 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Section 1 - Hero */}
       <section className="relative w-full min-h-[560px] flex items-center justify-center overflow-hidden">
-        <Image 
-          src="/images/hero-park.jpg" 
-          alt="Buttonwood Park" 
-          fill 
-          priority 
-          className="object-cover object-center absolute inset-0 z-0" 
+        <Image
+          src="/images/hero-park.jpg"
+          alt="Buttonwood Park"
+          fill
+          priority
+          className="object-cover object-center absolute inset-0 z-0"
         />
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)] z-10"></div>
         <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center flex flex-col items-center py-20">
@@ -122,16 +122,16 @@ export default function Home() {
 
       {/* NEW Section - Image Break */}
       <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
-        <Image 
-          src="/images/event-break.jpg" 
-          alt="BHRA Picnic Event" 
-          fill 
-          className="object-cover object-center absolute inset-0 z-0" 
+        <Image
+          src="/images/event-break.jpg"
+          alt="BHRA Picnic Event"
+          fill
+          className="object-cover object-center absolute inset-0 z-0"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#9b287b]/40 to-[#9b287b]/10 mix-blend-multiply z-10 transition-opacity duration-500"></div>
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <div className="text-center px-4">
-             {/* Optional text or logo here if desired */}
+            {/* Optional text or logo here if desired */}
           </div>
         </div>
       </section>
@@ -145,44 +145,34 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-10">
             {latestPosts.map((post) => (
-              <Link 
-                key={post.slug} 
-                href={`/news/${post.slug}`}
-                className="bg-[#f7f9f9] rounded-[8px] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group border border-transparent hover:border-gray-200 cursor-pointer"
-              >
-                <div className="relative w-full h-48 overflow-hidden">
-                  <img
-                    src={post.has_image && post.image ? post.image : "/images/hero-park.jpg"}
-                    alt={post.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#9b287b]/80 to-transparent" />
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4 z-10 bg-[#9b287b] text-white text-[12px] font-bold font-sans uppercase tracking-[1px] px-3 py-1 rounded-[4px] shadow-sm">
-                    {post.category || 'News'}
+              <div key={post.slug} className="bg-[#f7f9f9] rounded-[8px] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group border border-transparent hover:border-gray-200">
+                <div className="h-[200px] bg-[#9b287b] relative flex items-center justify-center p-6 overflow-hidden">
+                  <div className="absolute inset-0 bg-[#9b287b] mix-blend-multiply opacity-20 group-hover:opacity-10 transition-opacity duration-300 z-10"></div>
+                  <div className="relative w-full h-full opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 z-0 flex items-center justify-center">
+                    <img
+                      src="https://buttonwoodhillresidents.com/wp-content/uploads/2019/10/whitetransparent-300x131.png"
+                      alt="BHRA Logo"
+                      className="object-contain w-3/4 max-h-full"
+                    />
                   </div>
-                  {/* Title over gradient */}
-                  <div className="absolute bottom-0 left-0 right-0 z-10 px-4 pb-3">
-                    <p className="text-white font-serif text-base font-semibold line-clamp-2 leading-snug">
-                      {post.title}
-                    </p>
+                  <div className="absolute top-4 right-4 z-20 bg-[#9b287b] text-white text-[12px] font-bold font-sans uppercase tracking-[1px] px-3 py-1 rounded-[4px] shadow-sm">
+                    {post.category || 'News'}
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-grow">
                   <span className="text-[14px] text-[#666666] font-sans mb-3 block">
                     {format(new Date(post.date), 'MMM d, yyyy')}
                   </span>
+                  <h3 className="text-[26px] font-serif font-bold mb-4 leading-[1.2] line-clamp-2">
+                    <Link href={`/news/${post.slug}`} className="text-[#2c2d2e] hover:text-[#9b287b] transition-colors duration-300">
+                      {post.title}
+                    </Link>
+                  </h3>
                   <p className="text-[#666666] font-sans text-[16px] leading-[1.7em] mb-6 line-clamp-2 flex-grow">
                     {post.excerpt}
                   </p>
-                  <div className="mt-auto">
-                    <span className="text-[#9b287b] font-ui font-bold text-[13px] uppercase tracking-[1px] group-hover:text-[#a3107c] transition-colors duration-300 flex items-center">
-                      Read more <span className="ml-2">→</span>
-                    </span>
-                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
 
@@ -201,7 +191,7 @@ export default function Home() {
       <section className="relative py-24 lg:py-32 bg-[#9b287b] overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 bg-white/5 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
-        
+
         <div className="max-w-[1200px] relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <div className="inline-block mb-4 px-4 py-1.5 bg-white/20 rounded-full">
@@ -222,18 +212,18 @@ export default function Home() {
                 <div className="space-y-8">
                   <div className="flex items-start gap-5 group">
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#f7f9f9] flex items-center justify-center group-hover:bg-[#9b287b]/10 transition-colors">
-                      <svg className="w-5 h-5 text-[#9b287b]" fill="currentColor" viewBox="0 0 24 24"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                      <svg className="w-5 h-5 text-[#9b287b]" fill="currentColor" viewBox="0 0 24 24"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
                     </div>
                     <div className="flex-1 min-w-0 pt-1">
                       <p className="text-[12px] font-bold uppercase tracking-widest text-[#666666] mb-1">Email</p>
                       <a href="mailto:Buttonwoodhillresidents@gmail.com" className="text-base font-medium text-[#2c2d2e] hover:text-[#9b287b] break-all transition-colors">
-                        Buttonwoodhillresidents@<wbr/>gmail.com
+                        Buttonwoodhillresidents@<wbr />gmail.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-5 group">
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#f7f9f9] flex items-center justify-center group-hover:bg-[#9b287b]/10 transition-colors">
-                      <svg className="w-5 h-5 text-[#9b287b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                      <svg className="w-5 h-5 text-[#9b287b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                     </div>
                     <div className="flex-1 min-w-0 pt-1">
                       <p className="text-[12px] font-bold uppercase tracking-widest text-[#666666] mb-1">Phone</p>
@@ -272,7 +262,7 @@ export default function Home() {
                 </div>
 
                 <form action="https://formspree.io/f/mnjlnryk" method="POST" className="space-y-8">
-                  
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2.5">
                       <label htmlFor="firstName" className="text-[12px] font-bold uppercase tracking-widest text-[#2c2d2e]">First Name *</label>
@@ -310,7 +300,7 @@ export default function Home() {
                       Send Message
                     </button>
                   </div>
-                  
+
                   <p className="text-xs text-[#666666]">
                     By submitting this form, you agree to our privacy policy and terms of service.
                   </p>

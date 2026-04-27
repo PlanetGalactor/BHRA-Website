@@ -14,6 +14,10 @@ export default function ContactPage() {
                 <h3 className="text-xl font-serif text-primary mb-2">Our Neighbourhood</h3>
                 <p className="text-foreground">Buttonwood Hill<br/>Etobicoke, ON</p>
               </div>
+              <div>
+                <h3 className="text-xl font-serif text-primary mb-2">Phone</h3>
+                <p className="text-foreground">416-436-2675</p>
+              </div>
             </div>
           </div>
           

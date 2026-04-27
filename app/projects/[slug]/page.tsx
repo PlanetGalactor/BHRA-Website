@@ -59,7 +59,7 @@ const PROJECTS: {
     category: "Other Developments",
     slug: "plant-world",
     desc: "Plant World closed its doors at 4000 Eglinton Avenue West on September 30, 2019. Lanterra Developments are building \u201cNotting Hill Condos\u201d on this site featuring five residential towers in two Phases.",
-    ldesc: "Plant World closed its doors at 4000 Eglinton Avenue West on September 30, 2019. Lanterra Developments are building \u201cNotting Hill Condos\u201d on this site featuring five residential towers in two Phases. According to the developers\u2019 official plans, Notting Hill Condominiums will include a total of five high-rise towers: The project is designed with a high-rise tower of 33 storeys as its central peak along with surrounding towers of 30, 27, 24 and 18. Total units 1,360. Features retail space and shared amenity areas including a public park.\n\nThe Buttonwood Hill Residents Association was actively involved in civic engagement regarding this project. We mobilized community feedback, attended related city council planning meetings, and represented the best interests of our neighbourhood\u2019s infrastructure, traffic volume, and green spaces.",
+    ldesc: "Plant World closed its doors at 4000 Eglinton Avenue West on September 30, 2019. Lanterra Developments are building \u201cNotting Hill Condos\u201d on this site featuring five residential towers in two Phases. According to the developers\u2019 official plans, Notting Hill Condominiums will include a total of five high-rise towers: The project is designed with a high-rise tower of 33 storeys as its central peak along with surrounding towers of 30, 27, 24 and 18. Total units 1,360. Features retail space and shared amenity areas including a public park.\n\nButtonwood Hill Residents Association was actively involved in civic engagement regarding this project. We mobilized community feedback, attended related city council planning meetings, and represented the best interests of our neighbourhood\u2019s infrastructure, traffic volume, and green spaces.",
     image: "/images/projects/notting-hill.jpg",
     hideBoilerplate: true,
     links: [
@@ -173,7 +173,7 @@ export default async function DynamicProjectPage({ params }: { params: Promise<{
             ))}
             {!project.hideBoilerplate && (
               <p>
-                The Buttonwood Hill Residents Association is actively involved in civic engagement regarding this project. We mobilize community feedback, attend related city council planning meetings, and represent the best interests of our neighbourhood&apos;s infrastructure, traffic volume, and green spaces.
+                Buttonwood Hill Residents Association is actively involved in civic engagement regarding this project. We mobilize community feedback, attend related city council planning meetings, and represent the best interests of our neighbourhood&apos;s infrastructure, traffic volume, and green spaces.
               </p>
             )}
 
