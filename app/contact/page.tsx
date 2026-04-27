@@ -1,3 +1,5 @@
+import { MapPin, Phone, Mail } from "lucide-react";
+
 export default function ContactPage() {
   return (
     <div className="py-20 bg-border/30">
@@ -9,14 +11,35 @@ export default function ContactPage() {
               Have a question or want to get involved with the Buttonwood Hill Residents Association? Reach out using the form.
             </p>
             
-            <div className="mt-8 space-y-6">
-              <div>
-                <h3 className="text-xl font-serif text-primary mb-2">Our Neighbourhood</h3>
-                <p className="text-foreground">Buttonwood Hill<br/>Etobicoke, ON</p>
+            <div className="mt-8 space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="mt-1 bg-primary/10 p-3 rounded-full text-primary">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif text-primary mb-1">Location</h3>
+                  <p className="text-foreground">Etobicoke, Ontario</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-serif text-primary mb-2">Phone</h3>
-                <p className="text-foreground">416-436-2675</p>
+              <div className="flex items-start gap-4">
+                <div className="mt-1 bg-primary/10 p-3 rounded-full text-primary">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif text-primary mb-1">Phone</h3>
+                  <p className="text-foreground">416-436-2675</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="mt-1 bg-primary/10 p-3 rounded-full text-primary">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif text-primary mb-1">Email</h3>
+                  <a href="mailto:Buttonwoodhillresidents@gmail.com" className="text-foreground hover:text-primary transition-colors break-all">
+                    Buttonwoodhillresidents@gmail.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>
