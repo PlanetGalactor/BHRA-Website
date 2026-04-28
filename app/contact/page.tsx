@@ -45,7 +45,7 @@ export default function ContactPage() {
           </div>
           
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-            <form action="https://formspree.io/f/mnjlnryk" method="POST" className="space-y-6">
+            <form action="https://formspree.io/f/mjgjnkqz" method="POST" className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-bold text-gray-700 font-ui uppercase tracking-wider mb-2">Name</label>
                 <input type="text" name="name" id="name" required className="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
